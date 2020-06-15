@@ -17,8 +17,8 @@
 	      <form action="cidadesIns.php" method="POST" enctype="multipart/form-data">
 	      	<div class="modal-body">
 				  	<div class="form-group">
-				   	<label for="cidades"> Nome cidade </label>
-				   	<input type="text" class="form-control" name="cidades" placeholder="Informe o nome da cidade" required="">
+				   	<label for="cidade"> Nome cidade </label>
+				   	<input id="cidade" type="text" class="form-control" name="cidade" placeholder="Informe o nome da cidade" required="">
 				  	</div>
 				  	<div class="form-group">
 				   	<label for="uf"> Estado </label>
@@ -60,8 +60,8 @@
 	      <form action="cidadesAlt.php" method="POST" enctype="multipart/form-data">
 	      	<div class="modal-body">
 				  	<div class="form-group">
-				   	<label for="cidades"> Nome cidade </label>
-				   	<input type="text" class="form-control" id="cidade" name="cidades" placeholder="Informe o nome da cidade" required="">
+				   	<label for="cidade"> Nome cidade </label>
+				   	<input type="text" class="form-control" id="cidade" name="cidade" placeholder="Informe o nome da cidade" required="">
 				  	</div>
 				  	<div class="form-group">
 				   	<label for="uf"> Estado </label>
@@ -179,12 +179,12 @@
 							{	
 					?>
 						<tr>
-							<th scope="row"><?= $row['cod_cidade']; ?></th>
+							<th scope="row"><?= $row['id_cidade']; ?></th>
 							<td><?= $row['cidade']; ?></td>
 							<td><?= $row['uf']; ?></td>
 							<td style="text-align: right; width: 20%;">
-								<button type="button" class="btn btn-success btnEditar" id="<?= $row['cod_cidade']; ?>"> Alterar </button>
-								<button type="button" class="btn btn-danger btnExcluir" id="<?= $row['cod_cidade']; ?>"> Excluir </button>
+								<button type="button" class="btn btn-success btnEditar" id="<?= $row['id_cidade']; ?>"> Alterar </button>
+								<button type="button" class="btn btn-danger btnExcluir" id="<?= $row['id_cidade']; ?>"> Excluir </button>
 							</td>
 						</tr>
 					<?php
@@ -223,7 +223,7 @@
 				dataType: "json",
 				success: function(data)
 				{
-					$('#upd_id').val(data.cod_cidade);
+					$('#upd_id').val(data.id_cidade);
 					$('#cidade').val(data.cidade);
 					$('#uf').val(data.uf).change();
 					$('#editForm').modal('show');

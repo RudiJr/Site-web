@@ -4,9 +4,11 @@
 	if (isset($_POST['alterar_dado']))
 	{
 		$id = $_POST['upd_id'];
-		$cidade = $_POST['cidades'];
+		$cidade = $_POST['cidade'];
 		$uf = $_POST['uf'];
-		$sql = "UPDATE cidade SET cidade = '$cidade', uf = '$uf' WHERE cod_cidade = '$id';";
+		$sql = "UPDATE revenda.cidade SET cidade = '$cidade', uf = '$uf' WHERE id_cidade = '$id';";
+
+
 		if ($mysqli->query($sql))
 		{
 			$_SESSION['msg'] = "Registro alterado com sucesso!";
@@ -14,6 +16,7 @@
 		}
 		else
 		{
+                    printf("Errormessage: %s\n", $mysqli->error);
 			$_SESSION['msg'] = "Registro não pode ser alterado!";
 			header('location: cidades.php?ret=ERR');
 		}

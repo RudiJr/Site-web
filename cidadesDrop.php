@@ -3,8 +3,8 @@
 	include_once('conexao.php');
 	if (isset($_POST['excluir_dado']))
 	{
-		$id = $_GET["id"];
-		$sql = "delete from cidade where cod_cidade = ".$id;
+		$id = $_POST["del_id"];
+		$sql = "DELETE FROM cidade WHERE id_cidade = '$id';";
 		if ($mysqli->query($sql))
 		{
 			$_SESSION['msg'] = "Registro excluído com sucesso!";
