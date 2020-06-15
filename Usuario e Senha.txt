@@ -1,0 +1,2 @@
+Administrador do Sistema: Login: Admin Senha: 1234
+Thiago Motos e Automóveis: Login: Thiago Senha: 1234

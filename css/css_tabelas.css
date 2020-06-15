@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tabela {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.tabela_ins {
+    width: 40%;
+    margin: 0 auto;
+}
+table, th, td {
+    border: 1px solid #D4E0EE;
+    border-collapse: collapse;
+    font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    color: #999;
+}
+
+caption {
+    font-size: 150%;
+    font-weight: bold;
+    margin: 5px;
+}
+
+td, th {
+    padding: 4px;
+}
+
+thead th {
+    text-align: center;
+    background: #E6EDF5;
+    color: #4F76A3;
+    font-size: 100% !important;
+}
+
+thead th img {
+    max-width:30px;
+    max-height:30px;
+    width: auto;
+    height: auto;
+}
+td img {
+    max-width:150px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+}
+
+tbody th {
+    font-weight: bold;
+}
+
+tbody tr { 
+    background: #FCFDFE;
+}
+
+tbody tr.odd { 
+    background: #F7F9FC; 
+}
+
+table a:link {
+    color: #718ABE;
+    text-decoration: none;
+}
+
+table a:visited {
+    color: #718ABE;
+    text-decoration: none;
+}
+
+table a:hover {
+    color: #718ABE;
+    text-decoration: underline !important;
+}
+
+tfoot th, tfoot td {
+    font-size: 85%;
+}
