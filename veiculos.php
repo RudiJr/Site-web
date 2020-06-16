@@ -16,16 +16,33 @@
 	      <!-- FORMULÁRIO DOS DADOS -->
 	      <form action="veiculosIns.php" method="POST" enctype="multipart/form-data">
 	      	<div class="modal-body">
-				  	<div class="form-group">
+                    <div class="form-group">
 				   	<label for="ano"> Ano </label>
-				   	<input type="text" class="form-control" name="ANo" placeholder="Informe o ano do veículo" required="">
-				  	</div>
+				   	<input type="text" class="form-control" name="Ano" placeholder="Informe o Ano do Veículo" required="">
+                    </div>
+                    <div class="form-group">
+				   	<label for="cor"> Cor </label>
+				   	<input type="text" class="form-control" name="Cor" placeholder="Informe a Cor do Veículo" required="">
+                    </div>
                     <div class="form-group">
 				   	<label for="valor"> Valor </label>
-				   	<input type="text" class="form-control" name="Valor" placeholder="Informe o valor do veículo" required="">
-				  	</div>
-				  	<div class="form-group">
-				   	<label for="marca"> Marcas (Carros e Motos) </label>
+				   	<input type="text" class="form-control" name="Valor" placeholder="Informe o Valor do Veículo" required="">
+                    </div>
+                    
+                    <div class="form-group">
+				   	<label for="cod_marca"> Código da marca </label>
+				   	<input type="text" class="form-control" name="Código" placeholder="Informe o Código da Marca" required="">
+                    </div>
+                    <div class="form-group">
+				   	<label for="tipo_veiculo"> Tipo do veículo </label>
+				   	<input type="text" class="form-control" name="Tipo" placeholder="Informe o Tipo do Veículo (Moto ou Carro) " required="">
+                    </div>
+                    <div class="form-group">
+				   	<label for="modelo_veiculo"> Modelo do Veículo </label>
+				   	<input type="text" class="form-control" name="Modelo" placeholder="Informe o Modelo do Veículo" required="">
+                    </div>
+                    <div class="form-group">
+				   	<label for="marca_veiculo"> Marcas (Carros e Motos) </label>
 				   	<select class="custom-select" name="uf" required>
 						  	<option value="" selected> Selecionar uma Marca (Moto) </option>
 						  	<option value="SC"> Outros </option>
@@ -37,20 +54,11 @@
 						  	<option value="RJ"> Chevrolet </option>
                                                         <option value="RJ"> Fiat </option>
                                                         <option value="RJ"> volkswagen </option>
-						</select>
-				  	</div>
-                    <div class="form-group">
-				   	<label for="cod_marca"> Código da marca </label>
-				   	<input type="text" class="form-control" name="Código" placeholder="Informe o código da marca" required="">
-				  	</div>
-                    <div class="form-group">
-				   	<label for="tipo"> Tipo do veículo </label>
-				   	<input type="text" class="form-control" name="Tipo" placeholder="Informe o tipo do veículo (Moto ou Carro) " required="">
-				  	</div>
-                    <div class="form-group">
-				   	<label for="modelo"> Modelo do Veículo </label>
-				   	<input type="text" class="form-control" name="Modelo" placeholder="Informe o modelo do veículo" required="">
-				  	</div>
+					</select>
+                    </div>
+                    
+                    
+                    
 	      	</div>
 		      <div class="modal-footer">
 		      	<button type="button" class="btn btn-secondary" data-dismiss="modal"> Fechar </button>
@@ -79,16 +87,33 @@
 	      <!-- FORMULÁRIO DOS DADOS -->
 	      <form action="veiculosAlt.php" method="POST" enctype="multipart/form-data">
 	      	<div class="modal-body">
-				  	<div class="form-group">
+                    <div class="form-group">
 				   	<label for="ano"> Ano </label>
-				   	<input type="text" class="form-control" name="ANo" placeholder="Informe o ano do veículo" required="">
-				  	</div>
+				   	<input type="text" class="form-control" name="Ano" placeholder="Informe o Ano do Veículo" required="">
+                    </div>
+                    <div class="form-group">
+				   	<label for="cor"> Cor </label>
+				   	<input type="text" class="form-control" name="Cor" placeholder="Informe a Cor do Veículo" required="">
+                    </div>
                     <div class="form-group">
 				   	<label for="valor"> Valor </label>
-				   	<input type="text" class="form-control" name="Valor" placeholder="Informe o valor do veículo" required="">
-				  	</div>
-				  	<div class="form-group">
-				   	<label for="marca"> Marcas (Carros e Motos) </label>
+				   	<input type="text" class="form-control" name="Valor" placeholder="Informe o Valor do Veículo" required="">
+                    </div>
+                    
+                    <div class="form-group">
+				   	<label for="cod_marca"> Código da marca </label>
+				   	<input type="text" class="form-control" name="Código" placeholder="Informe o Código da Marca" required="">
+                    </div>
+                    <div class="form-group">
+				   	<label for="tipo_veiculo"> Tipo do veículo </label>
+				   	<input type="text" class="form-control" name="Tipo" placeholder="Informe o Tipo do Veículo (Moto ou Carro) " required="">
+                    </div>
+                    <div class="form-group">
+				   	<label for="modelo_veiculo"> Modelo do Veículo </label>
+				   	<input type="text" class="form-control" name="Modelo" placeholder="Informe o Modelo do Veículo" required="">
+                    </div>
+                    <div class="form-group">
+				   	<label for="marca_veiculo"> Marcas (Carros e Motos) </label>
 				   	<select class="custom-select" name="uf" required>
 						  	<option value="" selected> Selecionar uma Marca (Moto) </option>
 						  	<option value="SC"> Outros </option>
@@ -100,20 +125,11 @@
 						  	<option value="RJ"> Chevrolet </option>
                                                         <option value="RJ"> Fiat </option>
                                                         <option value="RJ"> volkswagen </option>
-						</select>
-				  	</div>
-                    <div class="form-group">
-				   	<label for="cod_marca"> Código da marca </label>
-				   	<input type="text" class="form-control" name="Código" placeholder="Informe o código da marca" required="">
-				  	</div>
-                    <div class="form-group">
-				   	<label for="tipo"> Tipo do veículo </label>
-				   	<input type="text" class="form-control" name="Tipo" placeholder="Informe o tipo do veículo (Moto ou Carro) " required="">
-				  	</div>
-                    <div class="form-group">
-				   	<label for="modelo"> Modelo do Veículo </label>
-				   	<input type="text" class="form-control" name="Modelo" placeholder="Informe o modelo do veículo" required="">
-				  	</div>
+					</select>
+                    </div>
+                    
+                    
+                    
 	      	</div>
 	      	<input type="hidden" id="upd_id" name="upd_id">
 		      <div class="modal-footer">
@@ -207,11 +223,13 @@
 						<tr>
 							<th scope="col"> Código </th>
 							<th scope="col"> Ano </th>
+                                                        <th scope="col"> Cor </th>
 							<th scope="col"> Valor </th>
-                                                        <th scope="col"> Marca </th>
-                                                        <th scope="col"> Código da Marca </th>
-                                                        <th scope="col"> Tipo do Veículo </th>
-                                                        <th scope="col"> Modelo do Veículo</th>
+                                                        <th scope="col"> Código Marca </th>
+                                                        <th scope="col"> Tipo Veiculo </th>
+                                                        <th scope="col"> Modelo Veículo </th>
+                                                        <th scope="col"> Marca Veículo</th>
+                                                        <th scope="col"> Proprietário</th>
 							<th scope="col" style="text-align: center;"> Ações </th>
 						</tr>
 					</thead>
@@ -224,13 +242,14 @@
 					?>
 						<tr>
 							<th scope="row"><?= $row['cod_veiculos']; ?></th>
-							<td><?= $row['modelo']; ?></td>
 							<td><?= $row['ano']; ?></td>
+							<td><?= $row['cor']; ?></td>
                                                         <td><?= $row['valor']; ?></td>
-                                                        <td><?= $row['marca']; ?></td>
-                                                        <td><?= $row['tipo']; ?></td>
-                                                        <td><?= $row['modelo']; ?></td>
-                                                        <td><?= $row['marca']; ?></td>
+                                                        <td><?= $row['cod_marca']; ?></td>
+                                                        <td><?= $row['tipo_veiculo']; ?></td>
+                                                        <td><?= $row['modelo_veiculo']; ?></td>
+                                                        <td><?= $row['marca_veiculo']; ?></td>
+                                                        <td><?= $row['cod_proprietario']; ?></td>
 							<td style="text-align: right; width: 20%;">
 								<button type="button" class="btn btn-success btnEditar" id="<?= $row['cod_veiculos']; ?>"> Alterar </button>
 								<button type="button" class="btn btn-danger btnExcluir" id="<?= $row['cod_veiculos']; ?>"> Excluir </button>
@@ -273,13 +292,14 @@
 				success: function(data)
 				{
 					$('#upd_id').val(data.cod_veiculos);
-					$('#cod_modelo').val(data.veiculos);
 					$('#ano').val(data.veiculos);
+					$('#cor').val(data.veiculos);
                                         $('#valor').val(data.veiculos);
                                         $('#cod_marca').val(data.veiculos);
-                                        $('#tipo').val(data.veiculos);
-                                        $('#modelo').val(data.veiculos);
-                                        $('#marca').val(data.veiculos);
+                                        $('#tipo_veiculo').val(data.veiculos);
+                                        $('#modelo_veiculo').val(data.veiculos);
+                                        $('#marca_veiculo').val(data.veiculos);
+                                        $('#cod_proprietario').val(data.veiculos);
 					$('#editForm').modal('show');
 				}
 			});

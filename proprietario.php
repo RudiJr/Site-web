@@ -20,39 +20,28 @@
 				   	<label for="Nome"> Nome do Proprietário </label>
 				   	<input type="text" class="form-control" name="Nome" placeholder="Informe o nome do proprietário" required="">
                     </div>
-                         <div class="form-group">
-				   	<label for="cpf"> RG </label>
+                    <div class="form-group">
+				   	<label for="rg"> RG </label>
 				   	<input type="text" class="form-control" name="rg" placeholder="Informe o RG do proprietário" required="">
                     </div>
-                         <div class="form-group">
-				   	<label for="rg"> CPF </label>
+                    <div class="form-group">
+				   	<label for="cpf"> CPF </label>
 				   	<input type="text" class="form-control" name="rg" placeholder="Informe o CPF do proprietário" required="">
                     </div>
-                         <div class="form-group">
+                    <div class="form-group">
 				   	<label for="fone"> Telefone </label>
 				   	<input type="text" class="form-control" name="fone" placeholder="Informe o Telefone do proprietário" required="">
                     </div>
-				  	
-				  	<div class="form-group">
-				   	<label for="cidades"> Cidade </label>
-				   	<input type="text" class="form-control" name="cidades" placeholder="Informe o nome da cidade" required="">
-				  	</div>
-                         <div class="form-group">
+                    <div class="form-group">
 				   	<label for="cep"> CEP </label>
-				   	<input type="text" class="form-control" name="cep" placeholder="Informe o Cep da Cidade" required="">
+				   	<input type="text" class="form-control" name="cep" placeholder="Informe o CEP da Cidade" required="">
                     </div>
-				  	<div class="form-group">
-				   	<label for="uf"> Estado </label>
-				   	<select class="custom-select" name="uf" required>
-						  	<option value="" selected> Selecionar um estado</option>
-						  	<option value="SC"> Santa Catarina </option>
-						  	<option value="PR"> Paraná </option>
-						  	<option value="RS"> Rio Grande do Sul </option>
-						  	<option value="SP"> São Paulo </option>
-						  	<option value="RJ"> Rio de Janeiro </option>
-						</select>
-				  	</div>
-	      	</div>
+                    <div class="form-group">
+				   	<label for="id"> ID da Cidade </label>
+				   	<input type="text" class="form-control" name="id" placeholder="Informe o ID da Cidade" required="">
+                    </div>
+				  	
+	      </div>
 		      <div class="modal-footer">
 		      	<button type="button" class="btn btn-secondary" data-dismiss="modal"> Fechar </button>
 		        	<button type="submit" name="inserir_dado" class="btn btn-primary"> Salvar registros </button>
@@ -84,39 +73,30 @@
 				   	<label for="Nome"> Nome do Proprietário </label>
 				   	<input type="text" class="form-control" name="Nome" placeholder="Informe o nome do proprietário" required="">
                     </div>
-                         <div class="form-group">
-				   	<label for="cpf"> RG </label>
+                    <div class="form-group">
+				   	<label for="rg"> RG </label>
 				   	<input type="text" class="form-control" name="rg" placeholder="Informe o RG do proprietário" required="">
                     </div>
-                         <div class="form-group">
-				   	<label for="rg"> CPF </label>
+                    <div class="form-group">
+				   	<label for="cpf"> CPF </label>
 				   	<input type="text" class="form-control" name="rg" placeholder="Informe o CPF do proprietário" required="">
                     </div>
-                         <div class="form-group">
+                    <div class="form-group">
 				   	<label for="fone"> Telefone </label>
 				   	<input type="text" class="form-control" name="fone" placeholder="Informe o Telefone do proprietário" required="">
                     </div>
 				  	
-				  	<div class="form-group">
-				   	<label for="cidades"> Cidade </label>
-				   	<input type="text" class="form-control" name="cidades" placeholder="Informe o nome da cidade" required="">
-				  	</div>
-                         <div class="form-group">
+				  	
+                    <div class="form-group">
 				   	<label for="cep"> CEP </label>
-				   	<input type="text" class="form-control" name="cep" placeholder="Informe o Cep da Cidade" required="">
+				   	<input type="text" class="form-control" name="cep" placeholder="Informe o CEP da Cidade" required="">
                     </div>
-				  	<div class="form-group">
-				   	<label for="uf"> Estado </label>
-				   	<select class="custom-select" name="uf" required>
-						  	<option value="" selected> Selecionar um estado</option>
-						  	<option value="SC"> Santa Catarina </option>
-						  	<option value="PR"> Paraná </option>
-						  	<option value="RS"> Rio Grande do Sul </option>
-						  	<option value="SP"> São Paulo </option>
-						  	<option value="RJ"> Rio de Janeiro </option>
-						</select>
-				  	</div>
-	      	</div>
+                    <div class="form-group">
+				   	<label for="id"> ID da Cidade </label>
+				   	<input type="text" class="form-control" name="id" placeholder="Informe o ID da Cidade" required="">
+                    </div>
+				  	
+	      </div>
 	      	<input type="hidden" id="upd_id" name="upd_id">
 		      <div class="modal-footer">
 		      	<button type="button" class="btn btn-secondary" data-dismiss="modal"> Fechar </button>
@@ -208,13 +188,12 @@
 					<thead>
 						<tr>
 							<th scope="col"> Código </th>
-							<th scope="col"> Proprietário </th>
-                                                        <th scope="col"> Cidade </th>
-                                                        <th scope="col"> CEP </th>
-							<th scope="col"> Estado </th>
+							<th scope="col"> Nome </th>
                                                         <th scope="col"> RG </th>
                                                         <th scope="col"> CPF </th>
-                                                        <th scope="col"> Telefone </th>
+							<th scope="col"> Fone </th>
+                                                        <th scope="col"> Cep </th>
+                                                        <th scope="col"> ID Cidade </th>
 							<th scope="col" style="text-align: center;"> Ações </th>
 						</tr>
 					</thead>
@@ -227,11 +206,12 @@
 					?>
 						<tr>
 							<th scope="row"><?= $row['cod_proprietario']; ?></th>
-							<td><?= $row['nome']; ?></td>
+							<td><?= $row['nome_proprietario']; ?></td>
 							<td><?= $row['rg']; ?></td>
                                                         <td><?= $row['cpf']; ?></td>
                                                         <td><?= $row['fone']; ?></td>
                                                         <td><?= $row['cep']; ?></td>
+                                                        <td><?= $row['id_cidade']; ?></td>
 							<td style="text-align: right; width: 20%;">
 								<button type="button" class="btn btn-success btnEditar" id="<?= $row['cod_proprietario']; ?>"> Alterar </button>
 								<button type="button" class="btn btn-danger btnExcluir" id="<?= $row['cod_proprietario']; ?>"> Excluir </button>
@@ -274,11 +254,12 @@
 				success: function(data)
 				{
 					$('#upd_id').val(data.cod_proprietario);
-					$('#nome').val(data.proprietario);
+					$('#nome_proprietario').val(data.proprietario);
 					$('#rg').val(data.proprietario);
                                         $('#cpf').val(data.proprietario);
-                                        $('#telefone').val(data.proprietario);
+                                        $('#fone').val(data.proprietario);
                                         $('#cep').val(data.proprietario);
+                                        $('#id_cidade').val(data.proprietario);
 					$('#editForm').modal('show');
 				}
 			});

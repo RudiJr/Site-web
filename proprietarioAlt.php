@@ -4,12 +4,13 @@
 	if (isset($_POST['alterar_dado']))
 	{
 		$id = $_POST['upd_id'];
-                $proprietario = $_POST['proprietario'];
+                $nome_proprietario = $_POST['nome_proprietario'];
                 $cep = $_POST['cep'];
                 $fone = $_POST['fone'];
                 $rg = $_POST['rg'];
                 $cpf = $_POST['cpf'];
-		$sql = "UPDATE proprietario SET proprietario = '$proprietario', cod_proprietario = '$id',cep = '$cep', fone = '$fone', rg = '$rg', cpf = '$cpf' ;";
+                $id_cidade = $_POST['id_cidade'];
+		$sql = "UPDATE proprietario SET nome_proprietario = '$nome_proprietario', cod_proprietario = '$id',cep = '$cep', fone = '$fone', rg = '$rg', cpf = '$cpf',id_cidade = '$id_cidade' ;";
 		if ($mysqli->query($sql))
 		{
 			$_SESSION['msg'] = "Registro alterado com sucesso!";

@@ -4,7 +4,7 @@
 	if (isset($_POST['excluir_dado']))
 	{
 		$id = $_POST['del_id'];
-		$sql = "DELETE FROM automoveis WHERE cod_automoveis = '$id';";
+		$sql = "DELETE FROM automoveis WHERE cod_veiculos = '$id';";
 		if ($mysqli->query($sql))
 		{
 			$_SESSION['msg'] = "Registro excluído com sucesso!";

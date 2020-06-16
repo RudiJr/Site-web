@@ -3,15 +3,14 @@
 	include_once('conexao.php');
 	if (isset($_POST['inserir_dado']))
 	{
-		$proprietario = $_POST['proprietario'];
-		$cod_proprietario = $_POST['cod_proprietario'];
+		$id = $_POST['upd_id'];
                 $nome_proprietario = $_POST['nome_proprietario'];
                 $rg = $_POST['rg'];
                 $cpf = $_POST['cpf'];
-                $telefone = $_POST['telefone'];
+                $fone = $_POST['fone'];
                 $cep = $_POST['cep'];
-                $cidade = $_POST['cidade'];
-		$sql = "INSERT INTO proprietario(cod_proprietario,nome_proprietario,rg,cpf,telefone,cep,id_cidade) VALUES ('$proprietario','$nome','$rg','$cpf','$telefone','$cep','$cidade');";
+                $id_cidade = $_POST['id_cidade'];
+		$sql = "INSERT INTO proprietario(cod_proprietario,nome_proprietario,rg,cpf,telefone,cep,id_cidade) VALUES ('$proprietario','$nome_proprietario','$rg','$cpf','$fone','$cep','$id_cidade');";
 		if ($mysqli->query($sql))
 		{
 			$_SESSION['msg'] = "Registro inserido com sucesso!";
