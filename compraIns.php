@@ -3,10 +3,12 @@
 	include_once('conexao.php');
 	if (isset($_POST['inserir_dado']))
 	{
-		$compra = $_POST['compra'];
-		$valor_compra = $_POST['vCompra'];
-                $data_compra = $_POST['dCompra'];
-		$sql = "INSERT INTO compra (compra, valor_compra, data_compra) VALUES ('$compra', '$valor_compra','$data_compra');";
+		
+		$valor_compra = $_POST['valor_compra'];
+                $data_compra = $_POST['data_compra'];
+                $cod_veiculos = $_POST['cod_veiculos'];
+                $cod_proprietario = $_POST['cod_proprietario'];
+		$sql = "INSERT INTO compra (valor_compra, data_compra,cod_veiculos,cod_proprietario) VALUES ('$valor_compra','$data_compra','$cod_veiculos','$cod_proprietario');";
 		if ($mysqli->query($sql))
 		{
 			$_SESSION['msg'] = "Registro inserido com sucesso!";

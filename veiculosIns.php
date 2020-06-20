@@ -12,17 +12,17 @@
                 $modelo_veiculo = $_POST['modelo_veiculo'];
                 $marca_veiculo = $_POST['marca_veiculo'];
                 $cod_proprietario = $_POST['cod_proprietario'];;
-                
 		$sql = "INSERT INTO veiculos(cod_veiculos,ano,cor,valor,cod_marca,tipo_veiculo,modelo_veiculo,marca_veiculo,cod_proprietario) VALUES ('$cod_veiculos','$ano','$cor','$valor','$cod_marca','$tipo_veiculo','$modelo_veiculo','$marca_veiculo','$cod_proprietario');";
 		if ($mysqli->query($sql))
 		{
 			$_SESSION['msg'] = "Registro inserido com sucesso!";
-			header('location: automoveis.php?ret=OK');
+			header('location: veiculos.php?ret=OK');
 		}
 		else
 		{
+                        echo "<script>alert($mysqli->error);</script>";
 			$_SESSION['msg'] = "Registro não pode ser inserido!";
-			header('location: automoveis.php?ret=ERR');
+			header('location: veiculos.php?ret=ERR');
 		}
 	}
 ?>

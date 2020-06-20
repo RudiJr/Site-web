@@ -4,10 +4,10 @@
 	if (isset($_POST['alterar_dado']))
 	{
 		$id = $_POST['upd_id'];
-		$revisao = $_POST['revisao'];
-		$data_r = $_POST['data_revisao'];
-                $r_feita = $_POST['revisao_feita'];
-		$sql = "UPDATE revisao SET revisao = '$revisao',cod_revisao = '$id',data_revisao = '$data_r',revisao_feita = '$r_feita';";
+		$data_revisao = $_POST['data_revisao'];
+                $revisao_feita = $_POST['revisao_feita'];
+                $cod_veiculos = $_POST['cod_veiculos'];
+		$sql = "UPDATE revisao SET data_revisao = '$data_revisao',revisao_feita = '$revisao_feita',cod_veiculos = '$cod_veiculos' where cod_revisao = '$id';";
 		if ($mysqli->query($sql))
 		{
 			$_SESSION['msg'] = "Registro alterado com sucesso!";

@@ -20,17 +20,18 @@
 				   	<label for="valorC"> Valor da Compra </label>
 				   	<input type="text" class="form-control" name="valorC" placeholder="Informe o valor da compra" required="">
 				  	</div>
-				  	<div class="form-group">
-				   	<label for="tipoC"> Tipo da compra </label>
-				   	<select class="custom-select" name="tipoC" required>
-						  	<option value="" selected> Selecionar o tipo da Compra</option>
-						  	<option value="Moto"> Moto </option>
-						  	<option value="Carro"> Carro </option>
-						</select>
-				  	</div>
+				  	
                     <div class="form-group">
 				   	<label for="dataC"> Data da Compra </label>
 				   	<input type="text" class="form-control" name="dataC" placeholder="Informe a data da compra" required="">
+				  	</div>
+                    <div class="form-group">
+				   	<label for="cod_veiculos"> Cód Veículo </label>
+				   	<input type="text" class="form-control" name="cod_veiculos" placeholder="Informe o cód do veiculo" required="">
+				  	</div>
+                    <div class="form-group">
+				   	<label for="cod_proprietario"> Cód Proprietário </label>
+				   	<input id="cod_proprietario" type="text" class="form-control" name="cod_proprietario" placeholder="Informe o cód do proprietário" required="">
 				  	</div>
 	      	</div>
 		      <div class="modal-footer">
@@ -64,17 +65,18 @@
 				   	<label for="valorC"> Valor da Compra </label>
 				   	<input type="text" class="form-control" name="valorC" placeholder="Informe o valor da compra" required="">
 				  	</div>
-				  	<div class="form-group">
-				   	<label for="tipoC"> Tipo da compra </label>
-				   	<select class="custom-select" name="tipoC" required>
-						  	<option value="" selected> Selecionar o tipo da Compra</option>
-						  	<option value="Moto"> Moto </option>
-						  	<option value="Carro"> Carro </option>
-						</select>
-				  	</div>
+				  	
                     <div class="form-group">
 				   	<label for="dataC"> Data da Compra </label>
 				   	<input type="text" class="form-control" name="dataC" placeholder="Informe a data da compra" required="">
+				  	</div>
+                    <div class="form-group">
+				   	<label for="cod_veiculos"> Cód Veículo </label>
+				   	<input type="text" class="form-control" name="cod_veiculos" placeholder="Informe o cód do veiculo" required="">
+				  	</div>
+                    <div class="form-group">
+				   	<label for="cod_proprietario"> Cód Proprietário </label>
+				   	<input id="cod_proprietario" type="text" class="form-control" name="cod_proprietario" placeholder="Informe o cód do proprietário" required="">
 				  	</div>
 	      	</div>
 	      	<input type="hidden" id="upd_id" name="upd_id">
@@ -169,8 +171,9 @@
 						<tr>
 							<th scope="col"> Código </th>
 							<th scope="col"> Valor </th>
-							<th scope="col"> Tipo </th>
-                                                        <th scope="col"> Data </th>
+							<th scope="col"> Data </th>
+                                                        <th scope="col"> Cód Veículo </th>
+                                                        <th scope="col"> Cód Proprietário </th>
 							<th scope="col" style="text-align: center;"> Ações </th>
 						</tr>
 					</thead>
@@ -185,6 +188,8 @@
 							<th scope="row"><?= $row['cod_compra']; ?></th>
 							<td><?= $row['valor_compra']; ?></td>
 							<td><?= $row['data_compra']; ?></td>
+                                                        <td><?= $row['cod_veiculos']; ?></td>
+                                                        <td><?= $row['cod_proprietario']; ?></td>
 							<td style="text-align: right; width: 20%;">
 								<button type="button" class="btn btn-success btnEditar" id="<?= $row['cod_compra']; ?>"> Alterar </button>
 								<button type="button" class="btn btn-danger btnExcluir" id="<?= $row['cod_compra']; ?>"> Excluir </button>
@@ -227,8 +232,10 @@
 				success: function(data)
 				{
 					$('#upd_id').val(data.cod_compra);
-					$('#valor_compra').val(data.compra);
-					$('#data_compra').val(data.compra);
+					$('#valor_compra').val(data.valor_compra);
+					$('#data_compra').val(data.data_compra);
+                                        $('#cod_veiculos').val(data.cod_veiculos);
+                                        $('#cod_proprietario').val(data.cod_proprietario);
 					$('#editForm').modal('show');
 				}
 			});

@@ -16,14 +16,27 @@
 	      <!-- FORMULÁRIO DOS DADOS -->
 	      <form action="vendaIns.php" method="POST" enctype="multipart/form-data">
 	      	<div class="modal-body">
-				  	<div class="form-group">
-				   	<label for="vVenda"> Valor venda </label>
-				   	<input type="text" class="form-control" name="vVenda" placeholder="Informe o nome da cidade" required="">
+			<div class="form-group">
+				   	<label for="data_venda"> Data venda </label>
+				   	<input type="text" class="form-control" name="data_venda" placeholder="Informe a Data venda" required="">
+				  	</div>	  	
+                            <div class="form-group">
+				   	<label for="valor_venda"> Valor venda </label>
+				   	<input type="text" class="form-control" name="valor_venda" placeholder="Informe o Valor venda" required="">
 				  	</div>
-                    <div class="form-group">
-				   	<label for="dVenda"> Data venda </label>
-				   	<input type="text" class="form-control" name="Dvenda" placeholder="Informe o nome da cidade" required="">
+                            <div class="form-group">
+				   	<label for="comissao_vend"> Comissão Vendedor </label>
+				   	<input type="text" class="form-control" name="comissao_vend" placeholder="Informe a Comissão Vendedor" required="">
 				  	</div>
+                            <div class="form-group">
+				   	<label for="cod_vendedor"> Cód Vendedor </label>
+				   	<input type="text" class="form-control" name="cod_vendedor" placeholder="Informe o Cód Vendedor" required="">
+				  	</div>
+                            <div class="form-group">
+				   	<label for="cod_cliente"> Cód Cliente </label>
+				   	<input type="text" class="form-control" name="cod_cliente" placeholder="Informe o Cód Cliente" required="">
+				  	</div>
+                    
 				  	
 	      	</div>
 		      <div class="modal-footer">
@@ -53,14 +66,27 @@
 	      <!-- FORMULÁRIO DOS DADOS -->
 	      <form action="vendaAlt.php" method="POST" enctype="multipart/form-data">
 	      	  	<div class="modal-body">
-				  	<div class="form-group">
-				   	<label for="vVenda"> Valor venda </label>
-				   	<input type="text" class="form-control" name="vVenda" placeholder="Informe o nome da cidade" required="">
+			<div class="form-group">
+				   	<label for="data_venda"> Data venda </label>
+				   	<input type="text" class="form-control" name="data_venda" placeholder="Informe a Data venda" required="">
+				  	</div>	  	
+                            <div class="form-group">
+				   	<label for="valor_venda"> Valor venda </label>
+				   	<input type="text" class="form-control" name="valor_venda" placeholder="Informe o Valor venda" required="">
 				  	</div>
-                    <div class="form-group">
-				   	<label for="dVenda"> Data venda </label>
-				   	<input type="text" class="form-control" name="Dvenda" placeholder="Informe o nome da cidade" required="">
+                            <div class="form-group">
+				   	<label for="comissao_vend"> Comissão Vendedor </label>
+				   	<input type="text" class="form-control" name="comissao_vend" placeholder="Informe a Comissão Vendedor" required="">
 				  	</div>
+                            <div class="form-group">
+				   	<label for="cod_vendedor"> Cód Vendedor </label>
+				   	<input type="text" class="form-control" name="cod_vendedor" placeholder="Informe o Cód Vendedor" required="">
+				  	</div>
+                            <div class="form-group">
+				   	<label for="cod_cliente"> Cód Cliente </label>
+				   	<input type="text" class="form-control" name="cod_cliente" placeholder="Informe o Cód Cliente" required="">
+				  	</div>
+                    
 				  	
 	      	</div>
 	      	<input type="hidden" id="upd_id" name="upd_id">
@@ -154,8 +180,11 @@
 					<thead>
 						<tr>
 							<th scope="col"> Código </th>
-							<th scope="col"> Valor </th>
 							<th scope="col"> Data </th>
+                                                        <th scope="col"> Valor </th>
+							<th scope="col"> Comissão Vendedor </th>
+                                                        <th scope="col"> Cód Vendedor </th>
+                                                        <th scope="col"> Cód Cliente </th>
 							<th scope="col" style="text-align: center;"> Ações </th>
 						</tr>
 					</thead>
@@ -168,8 +197,11 @@
 					?>
 						<tr>
 							<th scope="row"><?= $row['cod_venda']; ?></th>
-							<td><?= $row['valor']; ?></td>
-							<td><?= $row['data']; ?></td>
+							<td><?= $row['data_venda']; ?></td>
+                                                        <td><?= $row['valor_venda']; ?></td>
+                                                        <td><?= $row['comissao_vend']; ?></td>
+                                                        <td><?= $row['cod_vendedor']; ?></td>
+                                                        <td><?= $row['cod_cliente']; ?></td>
 							<td style="text-align: right; width: 20%;">
 								<button type="button" class="btn btn-success btnEditar" id="<?= $row['cod_venda']; ?>"> Alterar </button>
 								<button type="button" class="btn btn-danger btnExcluir" id="<?= $row['cod_venda']; ?>"> Excluir </button>
@@ -212,8 +244,11 @@
 				success: function(data)
 				{
 					$('#upd_id').val(data.cod_venda);
-					$('#valor').val(data.venda);
-					$('#data').val(data.venda);
+                                        $('#data_venda').val(data.data_venda);
+					$('#valor_venda').val(data.valor_venda);
+                                        $('#comissao_vend').val(data.comissao_vend);
+                                        $('#cod_vendedor').val(data.cod_vendedor);
+                                        $('#cod_cliente').val(data.cod_cliente);
 					$('#editForm').modal('show');
 				}
 			});

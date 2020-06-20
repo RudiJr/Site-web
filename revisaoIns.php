@@ -3,10 +3,10 @@
 	include_once('conexao.php');
 	if (isset($_POST['inserir_dado']))
 	{
-		$revisao = $_POST['revisao'];
-		$data_r = $_POST['data_revisao'];
-                $r_feita = $_POST['revisao_feita'];
-		$sql = "INSERT INTO revisao (cidade, data_revisao,revisao_feita) VALUES ('$revisao', '$data_r','$r_feita');";
+		$data_revisao = $_POST['data_revisao'];
+                $revisao_feita = $_POST['revisao_feita'];
+                $cod_veiculos = _POST['cod_veiculos'];
+		$sql = "INSERT INTO revisao(data_revisao,revisao_feita,cod_veiculos) VALUES ('$data_revisao','$revisao_feita','$cod_veiculos');";
 		if ($mysqli->query($sql))
 		{
 			$_SESSION['msg'] = "Registro inserido com sucesso!";
@@ -14,6 +14,7 @@
 		}
 		else
 		{
+                        echo "<script>alert($mysqli->error);</script>";
 			$_SESSION['msg'] = "Registro não pode ser inserido!";
 			header('location: revisao.php?ret=ERR');
 		}

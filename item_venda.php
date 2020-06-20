@@ -14,34 +14,22 @@
 	        	</button>
 	      </div>
 	      <!-- FORMULÁRIO DOS DADOS -->
-	      <form action="proprietarioIns.php" method="POST" enctype="multipart/form-data">
+	      <form action="item_vendaIns.php" method="POST" enctype="multipart/form-data">
 	      	<div class="modal-body">
-                    <div class="form-group">
-				   	<label for="nome_proprietario"> Nome do Proprietário </label>
-				   	<input id="nome_proprietario" type="text" class="form-control" name="nome_proprietario" placeholder="Informe o nome do proprietário" required="">
-                    </div>
-                    <div class="form-group">
-				   	<label for="rg"> RG </label>
-				   	<input id="rg" type="text" class="form-control" name="rg" placeholder="Informe o RG do proprietário" required="">
-                    </div>
-                    <div class="form-group">
-				   	<label for="cpf"> CPF </label>
-				   	<input id="cpf" type="text" class="form-control" name="cpf" placeholder="Informe o CPF do proprietário" required="">
-                    </div>
-                     <div class="form-group">
-				   	<label for="telefone"> Telefone </label>
-				   	<input id="telefone" type="text" class="form-control" name="telefone" placeholder="Informe o Telefone do proprietário" required="">
-                    </div>
-                    <div class="form-group">
-				   	<label for="cep"> CEP </label>
-				   	<input id="cep" type="text" class="form-control" name="cep" placeholder="Informe o CEP da Cidade" required="">
-                    </div>
-                    <div class="form-group">
-				   	<label for="id_cidade"> ID da Cidade </label>
-				   	<input id="id_cidade" type="text" class="form-control" name="id_cidade" placeholder="Informe o ID da Cidade" required="">
-                    </div>
-				  	
-	      </div>
+				  
+				  	<div class="form-group">
+				   	<label for="it_venda"> Item da Venda </label>
+				   	<select class="custom-select" name="it_venda" id="uf" required>
+						  	<option value="" selected> Selecionar um dos Itens</option>
+						  	<option value="Carro"> Carro </option>
+						  	<option value="Moto"> Moto </option>
+						</select>
+				  	</div>
+                    	<div class="form-group">
+				   	<label for="cod_venda"> Cód da Venda </label>
+				   	<input type="text" class="form-control" id="cidade" name="cod_venda" placeholder="Informe o código da venda" required="">
+				  	</div>
+	      	</div>
 		      <div class="modal-footer">
 		      	<button type="button" class="btn btn-secondary" data-dismiss="modal"> Fechar </button>
 		        	<button type="submit" name="inserir_dado" class="btn btn-primary"> Salvar registros </button>
@@ -67,34 +55,22 @@
 	        	</button>
 	      </div>
 	      <!-- FORMULÁRIO DOS DADOS -->
-	      <form action="proprietarioAlt.php" method="POST" enctype="multipart/form-data">
-	      <div class="modal-body">
-                    <div class="form-group">
-				   	<label for="nome_proprietario"> Nome do Proprietário </label>
-				   	<input id="nome_proprietario" type="text" class="form-control" name="nome_proprietario" placeholder="Informe o nome do proprietário" required="">
-                    </div>
-                    <div class="form-group">
-				   	<label for="rg"> RG </label>
-				   	<input id="rg" type="text" class="form-control" name="rg" placeholder="Informe o RG do proprietário" required="">
-                    </div>
-                    <div class="form-group">
-				   	<label for="cpf"> CPF </label>
-				   	<input id="cpf" type="text" class="form-control" name="cpf" placeholder="Informe o CPF do proprietário" required="">
-                    </div>
-                    <div class="form-group">
-				   	<label for="telefone"> Telefone </label>
-				   	<input id="telefone" type="text" class="form-control" name="telefone" placeholder="Informe o Telefone do proprietário" required="">
-                    </div>
-                    <div class="form-group">
-				   	<label for="cep"> CEP </label>
-				   	<input id="cep" type="text" class="form-control" name="cep" placeholder="Informe o CEP da Cidade" required="">
-                    </div>
-                    <div class="form-group">
-				   	<label for="id_cidade"> ID da Cidade </label>
-				   	<input id="id_cidade" type="text" class="form-control" name="id_cidade" placeholder="Informe o ID da Cidade" required="">
-                    </div>
-				  	
-	      </div>
+	      <form action="item_vendaAlt.php" method="POST" enctype="multipart/form-data">
+	      	<div class="modal-body">
+				  
+				  	<div class="form-group">
+				   	<label for="it_venda"> Item da Venda </label>
+				   	<select class="custom-select" name="it_venda" id="uf" required>
+						  	<option value="" selected> Selecionar um dos Itens</option>
+						  	<option value="Carro"> Carro </option>
+						  	<option value="Moto"> Moto </option>
+						</select>
+				  	</div>
+                    	<div class="form-group">
+				   	<label for="cod_venda"> Cód da Venda </label>
+				   	<input type="text" class="form-control" id="cidade" name="cod_venda" placeholder="Informe o código da venda" required="">
+				  	</div>
+	      	</div>
 	      	<input type="hidden" id="upd_id" name="upd_id">
 		      <div class="modal-footer">
 		      	<button type="button" class="btn btn-secondary" data-dismiss="modal"> Fechar </button>
@@ -123,7 +99,7 @@
 	        	</button>
 	      </div>
 	      <!-- FORMULÁRIO DOS DADOS -->
-	      <form action="proprietarioDrop.php" method="POST" enctype="multipart/form-data">
+	      <form action="item_vendaDrop.php" method="POST" enctype="multipart/form-data">
 	      	<div class="modal-body">
 	      		<input type="hidden" id="del_id" name="del_id">
 	      		<h6> Tem certeza de que deseja excluir este registro? </h6>			  	
@@ -142,11 +118,11 @@
 <div class="container">
 	<div class="jumbotron">
 		<div class="card text-center">
-			<h2> Proprietário </h2>
+			<h2> Item da Venda </h2>
 		</div>
 		<div class="card">
 			<div class="card-body">
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addForm"> Adicionar Proprietário </button>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addForm"> Adicionar Item Vendido </button>
 				<span id="botoesExportar" style="float: right;"></span>
 			</div>
 			<?php
@@ -179,19 +155,15 @@
 			<div class="card-body">
 				<?php
 					include_once('conexao.php');
-					$sql = "SELECT * FROM proprietario;";
+					$sql = "SELECT * FROM item_venda;";
 					$result = $mysqli->query($sql);
 				?>
 				<table class="table table-sm table-hover" id="minhaTabela">
 					<thead>
 						<tr>
 							<th scope="col"> Código </th>
-							<th scope="col"> Nome </th>
-                                                        <th scope="col"> RG </th>
-                                                        <th scope="col"> CPF </th>
-                                                        <th scope="col"> Telefone </th>
-                                                        <th scope="col"> Cep </th>
-                                                        <th scope="col"> ID Cidade </th>
+							<th scope="col"> Item da Venda </th>
+							<th scope="col"> Cód da Venda </th>
 							<th scope="col" style="text-align: center;"> Ações </th>
 						</tr>
 					</thead>
@@ -203,16 +175,12 @@
 							{	
 					?>
 						<tr>
-							<th scope="row"><?= $row['cod_proprietario']; ?></th>
-							<td><?= $row['nome_proprietario']; ?></td>
-							<td><?= $row['rg']; ?></td>
-                                                        <td><?= $row['cpf']; ?></td>
-                                                        <td><?= $row['telefone']; ?></td>
-                                                        <td><?= $row['cep']; ?></td>
-                                                        <td><?= $row['id_cidade']; ?></td>
+							<th scope="row"><?= $row['cod_item']; ?></th>
+							<td><?= $row['it_venda']; ?></td>
+							<td><?= $row['cod_venda']; ?></td>
 							<td style="text-align: right; width: 20%;">
-								<button type="button" class="btn btn-success btnEditar" id="<?= $row['cod_proprietario']; ?>"> Alterar </button>
-								<button type="button" class="btn btn-danger btnExcluir" id="<?= $row['cod_proprietario']; ?>"> Excluir </button>
+								<button type="button" class="btn btn-success btnEditar" id="<?= $row['cod_item']; ?>"> Alterar </button>
+								<button type="button" class="btn btn-danger btnExcluir" id="<?= $row['cod_item']; ?>"> Excluir </button>
 							</td>
 						</tr>
 					<?php
@@ -245,20 +213,15 @@
 		{
 			var id_upd = $(this).attr('id');
 			$.ajax({
-				url: "proprietarioBusca.php",
+				url: "item_vendaBusca.php",
 				method: "POST",
 				data: {id: id_upd},
 				dataType: "json",
 				success: function(data)
 				{
-                                        
-					$('#upd_id').val(data.cod_proprietario);
-					$('#nome_proprietario').val(data.nome_proprietario);
-					$('#rg').val(data.rg);
-                                        $('#cpf').val(data.cpf);
-                                        $('#telefone').val(data.telefone);
-                                        $('#cep').val(data.cep);
-                                        $('#id_cidade').val(data.id_cidade);
+					$('#upd_id').val(data.cod_item);
+					$('#it_venda').val(data.it_venda);
+					$('#cod_venda').val(data.cod_venda).change();
 					$('#editForm').modal('show');
 				}
 			});

@@ -20,7 +20,7 @@ switch ($_GET['url']) {
     case 'vendedor':
         include_once('vendedor.php');
         break;
-    case 'cliente':
+    case 'clientes':
         include_once('clientes.php');
         break;
     case 'comissao':

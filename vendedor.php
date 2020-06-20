@@ -16,13 +16,21 @@
 	      <!-- FORMULÁRIO DOS DADOS -->
 	      <form action="vendedorIns.php" method="POST" enctype="multipart/form-data">
 	      	<div class="modal-body">
-				  	<div class="form-group">
-				   	<label for="nVendedor"> Nome do Vendedor </label>
-				   	<input type="text" class="form-control" name="nVendedor" placeholder="Informe o nome do vendedor" required="">
+				    	<div class="form-group">
+				   	<label for="nome"> Nome do Vendedor </label>
+				   	<input type="text" class="form-control" name="nome" placeholder="Informe o nome do vendedor" required="">
 				  	</div>
                                         <div class="form-group">
-				   	<label for="fVendedor"> Fone do vendedor </label>
-				   	<input type="text" class="form-control" name="fVendedor" placeholder="Informe o Telefone do vendedor" required="">
+				   	<label for="cep"> CEP </label>
+				   	<input type="text" class="form-control" name="fVendedor" placeholder="Informe o CEP do vendedor" required="">
+				  	</div>
+                    <div class="form-group">
+				   	<label for="telefone"> Fone do vendedor </label>
+				   	<input type="text" class="form-control" name="telefone" placeholder="Informe o Telefone do vendedor" required="">
+				  	</div>
+                    <div class="form-group">
+				   	<label for="id_cidade"> ID Cidade </label>
+				   	<input type="text" class="form-control" name="id_cidade" placeholder="Informe o ID da cidade do vendedor" required="">
 				  	</div>
 	      	</div>
 		      <div class="modal-footer">
@@ -51,15 +59,24 @@
 	      </div>
 	      <!-- FORMULÁRIO DOS DADOS -->
 	      <form action="vendedorAlt.php" method="POST" enctype="multipart/form-data">
-	      	<div class="modal-body">
+	     	<div class="modal-body">
 				  	<div class="form-group">
-				   	<label for="nVendedor"> Nome do Vendedor </label>
-				   	<input type="text" class="form-control" name="nVendedor" placeholder="Informe o nome do vendedor" required="">
+				   	<label for="nome"> Nome do Vendedor </label>
+				   	<input type="text" class="form-control" name="nome" placeholder="Informe o nome do vendedor" required="">
 				  	</div>
                                         <div class="form-group">
-				   	<label for="fVendedor"> Fone do vendedor </label>
-				   	<input type="text" class="form-control" name="fVendedor" placeholder="Informe o Telefone do vendedor" required="">
+				   	<label for="cep"> CEP </label>
+				   	<input type="text" class="form-control" name="fVendedor" placeholder="Informe o CEP do vendedor" required="">
 				  	</div>
+                    <div class="form-group">
+				   	<label for="telefone"> Fone do vendedor </label>
+				   	<input type="text" class="form-control" name="telefone" placeholder="Informe o Telefone do vendedor" required="">
+				  	</div>
+                    <div class="form-group">
+				   	<label for="id_cidade"> ID Cidade </label>
+				   	<input type="text" class="form-control" name="id_cidade" placeholder="Informe o ID da cidade do vendedor" required="">
+				  	</div>
+                 
 	      	</div>
 	      	<input type="hidden" id="upd_id" name="upd_id">
 		      <div class="modal-footer">
@@ -153,7 +170,9 @@
 						<tr>
 							<th scope="col"> Código </th>
 							<th scope="col"> Nome </th>
+                                                        <th scope="col"> CEP </th>
 							<th scope="col"> Telefone </th>
+                                                        <th scope="col"> ID Cidade </th>
 							<th scope="col" style="text-align: center;"> Ações </th>
 						</tr>
 					</thead>
@@ -167,7 +186,9 @@
 						<tr>
 							<th scope="row"><?= $row['cod_vendedor']; ?></th>
 							<td><?= $row['nome']; ?></td>
+                                                        <td><?= $row['cep']; ?></td>
 							<td><?= $row['telefone']; ?></td>
+                                                        <td><?= $row['id_cidade']; ?></td>
 							<td style="text-align: right; width: 20%;">
 								<button type="button" class="btn btn-success btnEditar" id="<?= $row['cod_vendedor']; ?>"> Alterar </button>
 								<button type="button" class="btn btn-danger btnExcluir" id="<?= $row['cod_vendedor']; ?>"> Excluir </button>
@@ -210,8 +231,10 @@
 				success: function(data)
 				{
 					$('#upd_id').val(data.cod_vendedor);
-					$('#nome').val(data.vendedor);
-					$('#telefone').val(data.vendedor);
+					$('#nome').val(data.nome);
+                                        $('#cep').val(data.cep);
+					$('#telefone').val(data.telefone);
+                                        $('#id_cidade').val(data.id_cidade);
 					$('#editForm').modal('show');
 				}
 			});

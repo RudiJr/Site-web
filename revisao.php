@@ -18,15 +18,15 @@
 	      	<div class="modal-body">
                     <div class="form-group">
 				   	<label for="data_revisao"> Data da revisão </label>
-				   	<input type="text" class="form-control" name="data" placeholder="Informe a Data da Revisão" required="">
+				   	<input id="data_revisao" type="text" class="form-control" name="data_revisao" placeholder="Informe a Data da Revisão" required="">
 				  	</div>		  	
                     <div class="form-group">
 				   	<label for="revisao_feita"> Revisão Feita </label>
-				   	<input type="text" class="form-control" name="revisao" placeholder="Informe a Revisão feita" required="">
+				   	<input id="revisao_feita" type="text" class="form-control" name="revisao_feita" placeholder="Informe a Revisão feita" required="">
 				  	</div>
                     <div class="form-group">
-				   	<label for="cod_veiculo"> Código Veículo </label>
-				   	<input type="text" class="form-control" name="cod" placeholder="Informe o Código do Veículo Revisado" required="">
+				   	<label for="cod_veiculos"> Código Veículo </label>
+				   	<input id="cod_veiculos" type="text" class="form-control" name="cod_veiculos" placeholder="Informe o Código do Veículo Revisado" required="">
 				  	</div>
 	      	</div>
 		      <div class="modal-footer">
@@ -58,15 +58,15 @@
 	      	<div class="modal-body">
                     <div class="form-group">
 				   	<label for="data_revisao"> Data da revisão </label>
-				   	<input type="text" class="form-control" name="data" placeholder="Informe a Data da Revisão" required="">
+				   	<input id="data_revisao" type="text" class="form-control" name="data_revisao" placeholder="Informe a Data da Revisão" required="">
 				  	</div>		  	
                     <div class="form-group">
 				   	<label for="revisao_feita"> Revisão Feita </label>
-				   	<input type="text" class="form-control" name="revisao" placeholder="Informe a Revisão feita" required="">
+				   	<input id="revisao_feita" type="text" class="form-control" name="revisao_feita" placeholder="Informe a Revisão feita" required="">
 				  	</div>
                     <div class="form-group">
-				   	<label for="cod_veiculo"> Código Veículo </label>
-				   	<input type="text" class="form-control" name="cod" placeholder="Informe o Código do Veículo Revisado" required="">
+				   	<label for="cod_veiculos"> Código Veículo </label>
+				   	<input id="cod_veiculos" type="text" class="form-control" name="cod_veiculos" placeholder="Informe o Código do Veículo Revisado" required="">
 				  	</div>
 	      	</div>
 	      	<input type="hidden" id="upd_id" name="upd_id">
@@ -116,7 +116,7 @@
 <div class="container">
 	<div class="jumbotron">
 		<div class="card text-center">
-			<h2> Cidades </h2>
+			<h2> Revisão </h2>
 		</div>
 		<div class="card">
 			<div class="card-body">
@@ -160,9 +160,9 @@
 					<thead>
 						<tr>
 							<th scope="col"> Código </th>
-							<th scope="col"> Tipo da revisão </th>
 							<th scope="col"> Data da revisão </th>
                                                         <th scope="col"> Revisão Feita </th>
+                                                        <th scope="col"> Código Veículo </th>
 							<th scope="col" style="text-align: center;"> Ações </th>
 						</tr>
 					</thead>
@@ -220,10 +220,10 @@
 				success: function(data)
 				{
 					$('#upd_id').val(data.cod_revisao);
-					$('#data_revisao').val(data.revisao);
-					$('#revisao_feita').val(data.revisao);
-                                        $('#tipo_revisao').val(data.revisao);
-                                        $('#cod_veiculos').val(data.revisao);
+					$('#data_revisao').val(data.data_revisao);
+					$('#revisao_feita').val(data.revisao_feita);
+                                        $('#tipo_revisao').val(data.tipo_revisao);
+                                        $('#cod_veiculos').val(data.cod_veiculos);
 					$('#editForm').modal('show');
 				}
 			});

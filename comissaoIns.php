@@ -3,9 +3,9 @@
 	include_once('conexao.php');
 	if (isset($_POST['inserir_dado']))
 	{
-		$comissao = $_POST['comissao'];
-		$valor_comissao = $_POST['valor'];
-		$sql = "INSERT INTO comissao (comissao, valor,) VALUES ('$compra', '$valor);";
+		$valor = $_POST['valor'];
+                $cod_vendedor = $_POST['cod_vendedor'];
+		$sql = "INSERT INTO comissao (valor,cod_vendedor) VALUES ('$valor','$cod_vendedor');";
 		if ($mysqli->query($sql))
 		{
 			$_SESSION['msg'] = "Registro inserido com sucesso!";

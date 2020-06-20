@@ -17,8 +17,12 @@
 	      <form action="comissaoIns.php" method="POST" enctype="multipart/form-data">
 	      	<div class="modal-body">
 				  	<div class="form-group">
-				   	<label for="Vcomissao"> Valor da comissão </label>
-				   	<input type="text" class="form-control" name="Vcomissao" placeholder="Informe o nome da cidade" required="">
+				   	<label for="valor"> Valor da comissão </label>
+				   	<input type="text" class="form-control" name="valor" placeholder="Informe o valor da comissão" required="">
+				  	</div>
+                    <div class="form-group">
+				   	<label for="cod_vendedor"> Código do vendedor </label>
+				   	<input type="text" class="form-control" name="cod_vendedor" placeholder="Informe o Código do vendedor" required="">
 				  	</div>
 				  	
 	      	</div>
@@ -50,8 +54,12 @@
 	      <form action="cidadesAlt.php" method="POST" enctype="multipart/form-data">
 	      	<div class="modal-body">
 				  	<div class="form-group">
-				   	<label for="Vcomissao"> Valor da comissão </label>
-				   	<input type="text" class="form-control" name="Vcomissao" placeholder="Informe o nome da cidade" required="">
+				   	<label for="valor"> Valor da comissão </label>
+				   	<input type="text" class="form-control" name="valor" placeholder="Informe o valor da comissão" required="">
+				  	</div>
+                    <div class="form-group">
+				   	<label for="cod_vendedor"> Código do vendedor </label>
+				   	<input type="text" class="form-control" name="cod_vendedor" placeholder="Informe o Código do vendedor" required="">
 				  	</div>
 				  	
 	      	</div>
@@ -146,7 +154,8 @@
 					<thead>
 						<tr>
 							<th scope="col"> Código </th>
-							<th scope="col"> Comissão </th>
+							<th scope="col"> Valor da Comissão </th>
+                                                        <th scope="col"> Cód do Vendedor </th>
 							<th scope="col" style="text-align: center;"> Ações </th>
 						</tr>
 					</thead>
@@ -160,6 +169,7 @@
 						<tr>
 							<th scope="row"><?= $row['cod_comissao']; ?></th>
 							<td><?= $row['valor']; ?></td>
+                                                        <td><?= $row['cod_vendedor']; ?></td>
 							<td style="text-align: right; width: 20%;">
 								<button type="button" class="btn btn-success btnEditar" id="<?= $row['cod_comissao']; ?>"> Alterar </button>
 								<button type="button" class="btn btn-danger btnExcluir" id="<?= $row['cod_comissao']; ?>"> Excluir </button>
@@ -202,7 +212,8 @@
 				success: function(data)
 				{
 					$('#upd_id').val(data.cod_comissao);
-					$('#valor').val(data.comissao);
+					$('#valor').val(data.valor);
+                                        $('#cod_vendedor').val(data.cod_vendedor);
 					$('#editForm').modal('show');
 				}
 			});

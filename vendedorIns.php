@@ -3,10 +3,11 @@
 	include_once('conexao.php');
 	if (isset($_POST['inserir_dado']))
 	{
-		$vendedor = $_POST['vendedor'];
-		$telefone = $_POST['telefone'];
                 $nome = $_POST['nome'];
-		$sql = "INSERT INTO vendedor (vendedor, telefone, nome) VALUES ('$vendedor', '$telefone','$nome');";
+                $cep = $_POST['cep'];
+		$telefone = $_POST['telefone'];
+                $id_cidade = $_POST['id_cidade'];
+		$sql = "INSERT INTO vendedor (nome,cep,telefone,id_cidade) VALUES ('$nome','$cep','$telefone','$id_cidade');";
 		if ($mysqli->query($sql))
 		{
 			$_SESSION['msg'] = "Registro inserido com sucesso!";

@@ -15,26 +15,26 @@
 	      </div>
 	      <!-- FORMULÁRIO DOS DADOS -->
 	      <form action="clientesIns.php" method="POST" enctype="multipart/form-data">
-	      	<div class="modal-body">
+	     	<div class="modal-body">
 				  	<div class="form-group">
-				   	<label for="nClientes"> Nome do Cliente </label>
-				   	<input type="text" class="form-control" name="nClientes" placeholder="Informe seu nome" required="">
+				   	<label for="nome_cliente"> Nome do Cliente </label>
+				   	<input type="text" class="form-control" name="nome_cliente" placeholder="Informe o Nome" required="">
 				  	</div>
                                         <div class="form-group">
-				   	<label for="rgClientes"> RG Cliente </label>
-				   	<input type="text" class="form-control" name="rgClientes" placeholder="Informe seu rg" required="">
+				   	<label for="cpf"> CPF Cliente </label>
+				   	<input type="text" class="form-control" name="cpf" placeholder="Informe o CPF" required="">
 				  	</div>
                                         <div class="form-group">
-				   	<label for="cpfClientes"> CPF Cliente </label>
-				   	<input type="text" class="form-control" name="cpfClientes" placeholder="Informe seu cpf " required="">
+				   	<label for="cep"> CEP </label>
+				   	<input type="text" class="form-control" name="cep" placeholder="Informe o CEP " required="">
 				  	</div>
                                         <div class="form-group">
-				   	<label for="foneClientes"> Telefone do Cliente </label>
-				   	<input type="text" class="form-control" name="foneClientes" placeholder="Informe seu telefone" required="">
+				   	<label for="telefone"> Telefone do Cliente </label>
+				   	<input type="text" class="form-control" name="telefone" placeholder="Informe o Telefone" required="">
 				  	</div>
                                         <div class="form-group">
-				   	<label for="eClientes">Email do Cliente </label>
-				   	<input type="text" class="form-control" name="eClientes" placeholder="Informe seu email (se tiver)" required="">
+				   	<label for="id_cidade">ID da Cidade </label>
+				   	<input type="text" class="form-control" name="id_cidade" placeholder="Informe o ID da Cidade" required="">
 				  	</div>
 				  	
 	      	</div>
@@ -66,24 +66,24 @@
 	      <form action="clientesAlt.php" method="POST" enctype="multipart/form-data">
 	          	<div class="modal-body">
 				  	<div class="form-group">
-				   	<label for="nClientes"> Nome do Cliente </label>
-				   	<input type="text" class="form-control" name="nClientes" placeholder="Informe seu nome" required="">
+				   	<label for="nome_cliente"> Nome do Cliente </label>
+				   	<input type="text" class="form-control" name="nome_cliente" placeholder="Informe o Nome" required="">
 				  	</div>
                                         <div class="form-group">
-				   	<label for="rgClientes"> RG Cliente </label>
-				   	<input type="text" class="form-control" name="rgClientes" placeholder="Informe seu rg" required="">
+				   	<label for="cpf"> CPF Cliente </label>
+				   	<input type="text" class="form-control" name="cpf" placeholder="Informe o CPF" required="">
 				  	</div>
                                         <div class="form-group">
-				   	<label for="cpfClientes"> CPF Cliente </label>
-				   	<input type="text" class="form-control" name="cpfClientes" placeholder="Informe seu cpf " required="">
+				   	<label for="cep"> CEP </label>
+				   	<input type="text" class="form-control" name="cep" placeholder="Informe o CEP " required="">
 				  	</div>
                                         <div class="form-group">
-				   	<label for="foneClientes"> Telefone do Cliente </label>
-				   	<input type="text" class="form-control" name="foneClientes" placeholder="Informe seu telefone" required="">
+				   	<label for="telefone"> Telefone do Cliente </label>
+				   	<input type="text" class="form-control" name="telefone" placeholder="Informe o Telefone" required="">
 				  	</div>
                                         <div class="form-group">
-				   	<label for="eClientes">Email do Cliente </label>
-				   	<input type="text" class="form-control" name="eClientes" placeholder="Informe seu email (se tiver)" required="">
+				   	<label for="id_cidade">ID da Cidade</label>
+				   	<input type="text" class="form-control" name="id_cidade" placeholder="Informe o ID da Cidade" required="">
 				  	</div>
 				  	
 	      	</div>
@@ -179,10 +179,10 @@
 						<tr>
 							<th scope="col"> Código </th>
 							<th scope="col"> Nome </th>
-							<th scope="col"> RG </th>
-                                                        <th scope="col"> CPF </th>
+							<th scope="col"> CPF </th>
+                                                        <th scope="col"> CEP </th>
                                                         <th scope="col"> Telefone </th>
-                                                        <th scope="col"> Email </th>
+                                                        <th scope="col"> ID Cidade </th>
 							<th scope="col" style="text-align: center;"> Ações </th>
 						</tr>
 					</thead>
@@ -195,11 +195,11 @@
 					?>
 						<tr>
 							<th scope="row"><?= $row['cod_cliente']; ?></th>
-							<td><?= $row['nome']; ?></td>
-							<td><?= $row['rg']; ?></td>
-                                                        <td><?= $row['cpf']; ?></td>
+							<td><?= $row['nome_cliente']; ?></td>
+							<td><?= $row['cpf']; ?></td>
+                                                        <td><?= $row['cep']; ?></td>
                                                         <td><?= $row['telefone']; ?></td>
-                                                        <td><?= $row['email']; ?></td>
+                                                        <td><?= $row['id_cidade']; ?></td>
 							<td style="text-align: right; width: 20%;">
 								<button type="button" class="btn btn-success btnEditar" id="<?= $row['cod_cliente']; ?>"> Alterar </button>
 								<button type="button" class="btn btn-danger btnExcluir" id="<?= $row['cod_cliente']; ?>"> Excluir </button>
@@ -242,11 +242,11 @@
 				success: function(data)
 				{
 					$('#upd_id').val(data.cod_cliente);
-					$('#nome').val(data.cliente);
-					$('#rg').val(data.cliente);
-                                        $('#cpf').val(data.cliente);
-                                        $('#telefone').val(data.cliente);
-                                        $('#email').val(data.cliente);
+					$('#nome').val(data.nome);
+					$('#cpf').val(data.cpf);
+                                        $('#cep').val(data.cep);
+                                        $('#telefone').val(data.telefone);
+                                        $('#id_cidade').val(data.id_cidade);
 					$('#editForm').modal('show');
 				}
 			});
