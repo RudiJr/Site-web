@@ -4,16 +4,16 @@
 	if (isset($_POST['excluir_dado']))
 	{
 		$id = $_POST['del_id'];
-		$sql = "DELETE FROM automoveis WHERE cod_veiculos = '$id';";
-		if ($mysqli->query($sql))
-		{
-			$_SESSION['msg'] = "Registro excluído com sucesso!";
-			header('location: veiculos.php?ret=OK');
-		}
-		else
-		{
-			$_SESSION['msg'] = "Registro não pode ser excluído!";
-			header('location: veiculos.php?ret=ERR');
-		}
+		$sql = "DELETE FROM veiculos WHERE cod_veiculos = '$id';";
+		
+              if ($mysqli->query($sql)) {
+        $_SESSION['msg'] = "Registro Deletado com Sucesso";
+        header('location: veiculos.php?ret=OK');
+    } 
+         else {
+            $_SESSION['msg'] = "Erro ao Deletar este registro: <br> ERRO:, $mysqli->error";
+        }
+        header('location: veiculos.php?ret=erro');
+    
 	}
 ?>

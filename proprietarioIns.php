@@ -11,16 +11,17 @@
                 $cep = $_POST['cep'];
                 $id_cidade = $_POST['id_cidade'];
 		$sql = "INSERT INTO proprietario(nome_proprietario,rg,cpf,telefone,cep,id_cidade) VALUES ('$nome_proprietario','$rg','$cpf','$telefone','$cep','$id_cidade');";
-		if ($mysqli->query($sql))
-		{
-			$_SESSION['msg'] = "Registro inserido com sucesso!";
-			header('location: proprietario.php?ret=OK');
-		}
-		else
-		{
-                        echo "<script>alert($mysqli->error);</script>";
-			$_SESSION['msg'] = "Registro não pode ser inserido!";
-			header('location: proprietario.php?ret=ERR');
-		}
+		
+                  if ($mysqli->query($sql)) {
+        $_SESSION['msg'] = "Registro Salvo com Sucesso";
+        header('location: proprietario.php?ret=OK');
+    } else {
+        if ($mysqli->errno == 1062) {
+            $_SESSION['msg'] = "Registro Duplicado";
+        } else {
+            $_SESSION['msg'] = "Erro ao Salvar este registro: <br> ERRO:, $mysqli->error";
+        }
+        header('location: proprietario.php?ret=erro');
+    }
 	}
 ?>

@@ -5,15 +5,13 @@
 	{
 		$id = $_POST['del_id'];
 		$sql = "DELETE FROM comissao WHERE cod_comissao = '$id';";
-		if ($mysqli->query($sql))
-		{
-			$_SESSION['msg'] = "Registro excluído com sucesso!";
-			header('location: comissao.php?ret=OK');
-		}
-		else
-		{
-			$_SESSION['msg'] = "Registro não pode ser excluído!";
-			header('location: comissao.php?ret=ERR');
-		}
+		if ($mysqli->query($sql)) {
+        $_SESSION['msg'] = "Registro deletado com Sucesso";
+        header('location: comissao.php?ret=OK');
+    }  else {
+            $_SESSION['msg'] = "Erro ao deletar este registro: <br> ERRO:, $mysqli->error";
+        
+        header('location: comissao.php?ret=erro');
+    }
 	}
 ?>

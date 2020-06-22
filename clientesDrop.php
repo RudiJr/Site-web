@@ -5,15 +5,15 @@
 	{
 		$id = $_POST['del_id'];
 		$sql = "DELETE FROM cliente WHERE cod_cliente = '$id';";
-		if ($mysqli->query($sql))
-		{
-			$_SESSION['msg'] = "Registro excluído com sucesso!";
-			header('location: clientes.php?ret=OK');
-		}
-		else
-		{
-			$_SESSION['msg'] = "Registro não pode ser excluído!";
-			header('location: clientes.php?ret=ERR');
-		}
+		
+       if ($mysqli->query($sql)) {
+        $_SESSION['msg'] = "Registro deletado com Sucesso";
+        header('location: clientes.php?ret=OK');
+    } 
+        else {
+            $_SESSION['msg'] = "Erro ao deletar este registro: <br> ERRO:, $mysqli->error";
+        
+        header('location: clientes.php?ret=erro');
+    }
 	}
 ?>

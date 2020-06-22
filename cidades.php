@@ -1,6 +1,6 @@
 <?php 
-	include_once('sessao.php');
-	include_once('header_crud.php');
+    include_once 'sessao.php';
+    include_once 'header_crud.php'; 
 ?>
 <br>
 <!-- Janela modal de Cadastro -->
@@ -18,7 +18,7 @@
 	      	<div class="modal-body">
 				  	<div class="form-group">
 				   	<label for="cidade"> Nome cidade </label>
-				   	<input id="cidade" type="text" class="form-control" name="cidade" placeholder="Informe o nome da cidade" required="">
+				   	<input type="text" class="form-control" name="cidade" placeholder="Informe o nome da cidade" required="">
 				  	</div>
 				  	<div class="form-group">
 				   	<label for="uf"> Estado </label>
@@ -78,7 +78,7 @@
 	      	<input type="hidden" id="upd_id" name="upd_id">
 		      <div class="modal-footer">
 		      	<button type="button" class="btn btn-secondary" data-dismiss="modal"> Fechar </button>
-		        	<button type="submit" name="alterar_dado" class="btn btn-primary"> Salvar registros </button>
+		        	<button type="submit" name="alterar_dado" class="btn btn-primary"> Alterar Registro </button>
 		      </div>
 		   </form>
    	</div>
@@ -222,11 +222,11 @@
 				data: {id: id_upd},
 				dataType: "json",
 				success: function(data)
-				{
+				{   
 					$('#upd_id').val(data.id_cidade);
 					$('#cidade').val(data.cidade);
 					$('#uf').val(data.uf).change();
-					$('#editForm').modal('show');
+                                        $('#editForm').modal('show');
 				}
 			});
 		});

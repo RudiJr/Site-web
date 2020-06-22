@@ -12,16 +12,16 @@
 		$sql = "UPDATE venda SET data_venda = '$data_venda', valor_venda = '$valor_venda',comissao_vend = '$comissao_vend',cod_vendedor = '$cod_vendedor',cod_cliente = '$cod_cliente' WHERE cod_venda = '$id';";
 
 
-		if ($mysqli->query($sql))
-		{
-			$_SESSION['msg'] = "Registro alterado com sucesso!";
-			header('location: venda.php?ret=OK');
-		}
-		else
-		{
-                    printf("Errormessage: %s\n", $mysqli->error);
-			$_SESSION['msg'] = "Registro não pode ser alterado!";
-			header('location: venda.php?ret=ERR');
-		}
+		           if ($mysqli->query($sql)) {
+        $_SESSION['msg'] = "Registro Alterado com Sucesso";
+        header('location: venda.php?ret=OK');
+    } else {
+        if ($mysqli->errno == 1062) {
+            $_SESSION['msg'] = "Registro Duplicado";
+        } else {
+            $_SESSION['msg'] = "Erro ao Alterar este registro: <br> ERRO:, $mysqli->error";
+        }
+        header('location: venda.php?ret=erro');
+    }
 	}
 ?>

@@ -56,6 +56,10 @@
                                                         <option value="RJ"> volkswagen </option>
 					</select>
                     </div>
+                    <div class="form-group">
+				   	<label for="cod_proprietario"> Cód do Proprietário </label>
+				   	<input id="cod_proprietario" type="text" class="form-control" name="cod_proprietario" placeholder="Informe o Modelo do Veículo" required="">
+                    </div>
                     
                     
                     
@@ -126,6 +130,10 @@
                                                         <option value="RJ"> Fiat </option>
                                                         <option value="RJ"> volkswagen </option>
 					</select>
+                    </div>
+                     <div class="form-group">
+				   	<label for="cod_proprietario"> Cód do Proprietário </label>
+				   	<input id="cod_proprietario" type="text" class="form-control" name="cod_proprietario" placeholder="Informe o Modelo do Veículo" required="">
                     </div>
                     
                     

@@ -5,15 +5,14 @@
 	{
 		$id = $_POST['del_id'];
 		$sql = "DELETE FROM vendedor WHERE cod_vendedor = '$id';";
-		if ($mysqli->query($sql))
-		{
-			$_SESSION['msg'] = "Registro excluído com sucesso!";
-			header('location: vendedor.php?ret=OK');
-		}
-		else
-		{
-			$_SESSION['msg'] = "Registro não pode ser excluído!";
-			header('location: vendedor.php?ret=ERR');
-		}
+		
+               if ($mysqli->query($sql)) {
+        $_SESSION['msg'] = "Registro Salvo com Sucesso";
+        header('location: vendedor.php?ret=OK');
+    } else {
+            $_SESSION['msg'] = "Erro ao Salvar este registro: <br> ERRO:, $mysqli->error";
+        
+        header('location: vendedor.php?ret=erro');
+    }
 	}
 ?>

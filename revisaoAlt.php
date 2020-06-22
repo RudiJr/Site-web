@@ -8,15 +8,17 @@
                 $revisao_feita = $_POST['revisao_feita'];
                 $cod_veiculos = $_POST['cod_veiculos'];
 		$sql = "UPDATE revisao SET data_revisao = '$data_revisao',revisao_feita = '$revisao_feita',cod_veiculos = '$cod_veiculos' where cod_revisao = '$id';";
-		if ($mysqli->query($sql))
-		{
-			$_SESSION['msg'] = "Registro alterado com sucesso!";
-			header('location: revisao.php?ret=OK');
-		}
-		else
-		{
-			$_SESSION['msg'] = "Registro não pode ser alterado!";
-			header('location: revisao.php?ret=ERR');
-		}
+		
+                           if ($mysqli->query($sql)) {
+        $_SESSION['msg'] = "Registro Alterado com Sucesso";
+        header('location: revisao.php?ret=OK');
+    } else {
+        if ($mysqli->errno == 1062) {
+            $_SESSION['msg'] = "Registro Duplicado";
+        } else {
+            $_SESSION['msg'] = "Erro ao Alterar este registro: <br> ERRO:, $mysqli->error";
+        }
+        header('location: revisao.php?ret=erro');
+    }
 	}
 ?>

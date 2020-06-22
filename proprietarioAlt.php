@@ -11,16 +11,17 @@
                 $cpf = $_POST['cpf'];
                 $id_cidade = $_POST['id_cidade'];
 		$sql = "UPDATE proprietario SET nome_proprietario = '$nome_proprietario',cep = '$cep', telefone = '$telefone', rg = '$rg', cpf = '$cpf',id_cidade = '$id_cidade' where cod_proprietario = '$id' ;";
-		if ($mysqli->query($sql))
-		{
-			$_SESSION['msg'] = "Registro alterado com sucesso!";
-			header('location: proprietario.php?ret=OK');
-		}
-		else
-		{
-                        printf("Errormessage: %s\n", $mysqli->error);
-			$_SESSION['msg'] = "Registro não pode ser alterado!";
-			header('location: proprietario.php?ret=ERR');
-		}
+		
+                           if ($mysqli->query($sql)) {
+        $_SESSION['msg'] = "Registro Alterado com Sucesso";
+        header('location: proprietario.php?ret=OK');
+    } else {
+        if ($mysqli->errno == 1062) {
+            $_SESSION['msg'] = "Registro Duplicado";
+        } else {
+            $_SESSION['msg'] = "Erro ao Alterar este registro: <br> ERRO:, $mysqli->error";
+        }
+        header('location: proprietario.php?ret=erro');
+    }
 	}
 ?>

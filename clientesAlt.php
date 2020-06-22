@@ -10,15 +10,17 @@
                 $telefone = $_POST['telefone'];
                 $id_cidade = $_POST['id_cidade'];
 		$sql = "UPDATE cliente SET cod_cliente = '$id',nome_cliente = '$nome_cliente','cpf = $cpf','cep = $cep',telefone = '$telefone',id_cidade = '$id_cidade';";
-		if ($mysqli->query($sql))
-		{
-			$_SESSION['msg'] = "Registro alterado com sucesso!";
-			header('location: clientes.php?ret=OK');
-		}
-		else
-		{
-			$_SESSION['msg'] = "Registro não pode ser alterado!";
-			header('location: clientes.php?ret=ERR');
-		}
+		
+            if ($mysqli->query($sql)) {
+        $_SESSION['msg'] = "Registro Alterado com Sucesso";
+        header('location: clientes.php?ret=OK');
+    } else {
+        if ($mysqli->errno == 1062) {
+            $_SESSION['msg'] = "Registro Duplicado";
+        } else {
+            $_SESSION['msg'] = "Erro ao Alterar este registro: <br> ERRO:, $mysqli->error";
+        }
+        header('location: clientes.php?ret=erro');
+    }
 	}
 ?>
