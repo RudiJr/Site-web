@@ -17,13 +17,13 @@
 	      <form action="compraIns.php" method="POST" enctype="multipart/form-data">
 	      	<div class="modal-body">
 				  	<div class="form-group">
-				   	<label for="valorC"> Valor da Compra </label>
-				   	<input type="text" class="form-control" name="valorC" placeholder="Informe o valor da compra" required="">
+				   	<label for="valor_compra"> Valor da Compra </label>
+				   	<input type="text" class="form-control" name="valor_compra" placeholder="Informe o valor da compra" required="">
 				  	</div>
 				  	
                     <div class="form-group">
-				   	<label for="dataC"> Data da Compra </label>
-				   	<input type="text" class="form-control" name="dataC" placeholder="Informe a data da compra" required="">
+				   	<label for="data_compra"> Data da Compra </label>
+				   	<input type="text" class="form-control" name="data_compra" placeholder="Informe a data da compra" required="">
 				  	</div>
                     <div class="form-group">
 				   	<label for="cod_veiculos"> Cód Veículo </label>
@@ -62,13 +62,13 @@
 	      <form action="compraAlt.php" method="POST" enctype="multipart/form-data">
 	      	      	<div class="modal-body">
 				  	<div class="form-group">
-				   	<label for="valorC"> Valor da Compra </label>
-				   	<input type="text" class="form-control" name="valorC" placeholder="Informe o valor da compra" required="">
+				   	<label for="valor_compra"> Valor da Compra </label>
+				   	<input type="text" class="form-control" id="valor_compra" name="valor_compra" placeholder="Informe o valor da compra" required="">
 				  	</div>
 				  	
                     <div class="form-group">
-				   	<label for="dataC"> Data da Compra </label>
-				   	<input type="text" class="form-control" name="dataC" placeholder="Informe a data da compra" required="">
+				   	<label for="data_compra"> Data da Compra </label>
+				   	<input type="text" class="form-control" id="data_compra" name="data_compra" placeholder="Informe a data da compra" required="">
 				  	</div>
                     <div class="form-group">
 				   	<label for="cod_veiculos"> Cód Veículo </label>
@@ -82,7 +82,7 @@
 	      	<input type="hidden" id="upd_id" name="upd_id">
 		      <div class="modal-footer">
 		      	<button type="button" class="btn btn-secondary" data-dismiss="modal"> Fechar </button>
-		        	<button type="submit" name="alterar_dado" class="btn btn-primary"> Salvar registros </button>
+		        	<button type="submit" name="alterar_dado" class="btn btn-primary"> Alterar Registro </button>
 		      </div>
 		   </form>
    	</div>

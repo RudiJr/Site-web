@@ -18,15 +18,15 @@
 	      	<div class="modal-body">
                     <div class="form-group">
 				   	<label for="data_revisao"> Data da revisão </label>
-				   	<input id="data_revisao" type="text" class="form-control" name="data_revisao" placeholder="Informe a Data da Revisão" required="">
+				   	<input  type="text" class="form-control" name="data_revisao" placeholder="Informe a Data da Revisão" required="">
 				  	</div>		  	
                     <div class="form-group">
 				   	<label for="revisao_feita"> Revisão Feita </label>
-				   	<input id="revisao_feita" type="text" class="form-control" name="revisao_feita" placeholder="Informe a Revisão feita" required="">
+				   	<input  type="text" class="form-control" name="revisao_feita" placeholder="Informe a Revisão feita" required="">
 				  	</div>
                     <div class="form-group">
 				   	<label for="cod_veiculos"> Código Veículo </label>
-				   	<input id="cod_veiculos" type="text" class="form-control" name="cod_veiculos" placeholder="Informe o Código do Veículo Revisado" required="">
+				   	<input  type="text" class="form-control" name="cod_veiculos" placeholder="Informe o Código do Veículo Revisado" required="">
 				  	</div>
 	      	</div>
 		      <div class="modal-footer">
@@ -72,7 +72,7 @@
 	      	<input type="hidden" id="upd_id" name="upd_id">
 		      <div class="modal-footer">
 		      	<button type="button" class="btn btn-secondary" data-dismiss="modal"> Fechar </button>
-		        	<button type="submit" name="alterar_dado" class="btn btn-primary"> Salvar registros </button>
+		        	<button type="submit" name="alterar_dado" class="btn btn-primary"> Alterar Registro </button>
 		      </div>
 		   </form>
    	</div>

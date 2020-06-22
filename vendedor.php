@@ -22,7 +22,7 @@
 				  	</div>
                                         <div class="form-group">
 				   	<label for="cep"> CEP </label>
-				   	<input type="text" class="form-control" name="fVendedor" placeholder="Informe o CEP do vendedor" required="">
+				   	<input type="text" class="form-control" name="cep" placeholder="Informe o CEP do vendedor" required="">
 				  	</div>
                     <div class="form-group">
 				   	<label for="telefone"> Fone do vendedor </label>
@@ -62,26 +62,26 @@
 	     	<div class="modal-body">
 				  	<div class="form-group">
 				   	<label for="nome"> Nome do Vendedor </label>
-				   	<input type="text" class="form-control" name="nome" placeholder="Informe o nome do vendedor" required="">
+				   	<input type="text" class="form-control" id="nome" name="nome" placeholder="Informe o nome do vendedor" required="">
 				  	</div>
                                         <div class="form-group">
 				   	<label for="cep"> CEP </label>
-				   	<input type="text" class="form-control" name="fVendedor" placeholder="Informe o CEP do vendedor" required="">
+				   	<input type="text" class="form-control" id="cep" name="cep" placeholder="Informe o CEP do vendedor" required="">
 				  	</div>
                     <div class="form-group">
 				   	<label for="telefone"> Fone do vendedor </label>
-				   	<input type="text" class="form-control" name="telefone" placeholder="Informe o Telefone do vendedor" required="">
+				   	<input type="text" class="form-control" id="telefone" name="telefone" placeholder="Informe o Telefone do vendedor" required="">
 				  	</div>
                     <div class="form-group">
 				   	<label for="id_cidade"> ID Cidade </label>
-				   	<input type="text" class="form-control" name="id_cidade" placeholder="Informe o ID da cidade do vendedor" required="">
+				   	<input type="text" class="form-control" id="id_cidade" name="id_cidade" placeholder="Informe o ID da cidade do vendedor" required="">
 				  	</div>
                  
 	      	</div>
 	      	<input type="hidden" id="upd_id" name="upd_id">
 		      <div class="modal-footer">
 		      	<button type="button" class="btn btn-secondary" data-dismiss="modal"> Fechar </button>
-		        	<button type="submit" name="alterar_dado" class="btn btn-primary"> Salvar registros </button>
+		        	<button type="submit" name="alterar_dado" class="btn btn-primary"> Alterar Registro </button>
 		      </div>
 		   </form>
    	</div>

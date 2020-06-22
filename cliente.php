@@ -67,30 +67,30 @@
 	          	<div class="modal-body">
 				  	<div class="form-group">
 				   	<label for="nome_cliente"> Nome do Cliente </label>
-				   	<input type="text" class="form-control" name="nome_cliente" placeholder="Informe o Nome" required="">
+				   	<input type="text" class="form-control" id="nome_cliente" name="nome_cliente" placeholder="Informe o Nome" required="">
 				  	</div>
                                         <div class="form-group">
 				   	<label for="cpf"> CPF Cliente </label>
-				   	<input type="text" class="form-control" name="cpf" placeholder="Informe o CPF" required="">
+				   	<input type="text" class="form-control" id="cpf" name="cpf" placeholder="Informe o CPF" required="">
 				  	</div>
                                         <div class="form-group">
 				   	<label for="cep"> CEP </label>
-				   	<input type="text" class="form-control" name="cep" placeholder="Informe o CEP " required="">
+				   	<input type="text" class="form-control" id="cep" name="cep" placeholder="Informe o CEP " required="">
 				  	</div>
                                         <div class="form-group">
 				   	<label for="telefone"> Telefone do Cliente </label>
-				   	<input type="text" class="form-control" name="telefone" placeholder="Informe o Telefone" required="">
+				   	<input type="text" class="form-control" id="telefone" name="telefone" placeholder="Informe o Telefone" required="">
 				  	</div>
                                         <div class="form-group">
 				   	<label for="id_cidade">ID da Cidade</label>
-				   	<input type="text" class="form-control" name="id_cidade" placeholder="Informe o ID da Cidade" required="">
+				   	<input type="text" class="form-control" id="id_cidade" name="id_cidade" placeholder="Informe o ID da Cidade" required="">
 				  	</div>
 				  	
 	      	</div>
 	      	<input type="hidden" id="upd_id" name="upd_id">
 		      <div class="modal-footer">
 		      	<button type="button" class="btn btn-secondary" data-dismiss="modal"> Fechar </button>
-		        	<button type="submit" name="alterar_dado" class="btn btn-primary"> Salvar registros </button>
+		        	<button type="submit" name="alterar_dado" class="btn btn-primary"> Alterar Registro </button>
 		      </div>
 		   </form>
    	</div>
@@ -242,7 +242,7 @@
 				success: function(data)
 				{
 					$('#upd_id').val(data.cod_cliente);
-					$('#nome').val(data.nome);
+					$('#nome_cliente').val(data.nome_cliente);
 					$('#cpf').val(data.cpf);
                                         $('#cep').val(data.cep);
                                         $('#telefone').val(data.telefone);

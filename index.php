@@ -20,8 +20,8 @@ switch ($_GET['url']) {
     case 'vendedor':
         include_once('vendedor.php');
         break;
-    case 'clientes':
-        include_once('clientes.php');
+    case 'cliente':
+        include_once('cliente.php');
         break;
     case 'comissao':
         include_once('comissao.php');

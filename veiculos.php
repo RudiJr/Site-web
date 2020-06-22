@@ -18,32 +18,32 @@
 	      	<div class="modal-body">
                     <div class="form-group">
 				   	<label for="ano"> Ano </label>
-				   	<input id="ano" type="text" class="form-control" name="ano" placeholder="Informe o Ano do Veículo" required="">
+				   	<input  type="text" class="form-control" name="ano" placeholder="Informe o Ano do Veículo" required="">
                     </div>
                     <div class="form-group">
 				   	<label for="cor"> Cor </label>
-				   	<input id="cor" type="text" class="form-control" name="cor" placeholder="Informe a Cor do Veículo" required="">
+				   	<input  type="text" class="form-control" name="cor" placeholder="Informe a Cor do Veículo" required="">
                     </div>
                     <div class="form-group">
 				   	<label for="valor"> Valor </label>
-				   	<input id="valor" type="text" class="form-control" name="valor" placeholder="Informe o Valor do Veículo" required="">
+				   	<input  type="text" class="form-control" name="valor" placeholder="Informe o Valor do Veículo" required="">
                     </div>
                     
                     <div class="form-group">
 				   	<label for="cod_marca"> Código da marca </label>
-				   	<input id="cod_marca" type="text" class="form-control" name="cod_marca" placeholder="Informe o Código da Marca" required="">
+				   	<input  type="text" class="form-control" name="cod_marca" placeholder="Informe o Código da Marca" required="">
                     </div>
                     <div class="form-group">
 				   	<label for="tipo_veiculo"> Tipo do veículo </label>
-				   	<input id="tipo_veiculo" type="text" class="form-control" name="tipo_veiculo" placeholder="Informe o Tipo do Veículo (Moto ou Carro) " required="">
+				   	<input  type="text" class="form-control" name="tipo_veiculo" placeholder="Informe o Tipo do Veículo (Moto ou Carro) " required="">
                     </div>
                     <div class="form-group">
 				   	<label for="modelo_veiculo"> Modelo do Veículo </label>
-				   	<input id="modelo_veiculo" type="text" class="form-control" name="modelo_veiculo" placeholder="Informe o Modelo do Veículo" required="">
+				   	<input  type="text" class="form-control" name="modelo_veiculo" placeholder="Informe o Modelo do Veículo" required="">
                     </div>
                     <div class="form-group">
 				   	<label for="marca_veiculo"> Marcas (Carros e Motos) </label>
-				   	<select id="marca_veiculo" class="custom-select" name="marca_veiculo" required>
+				   	<select  class="custom-select" name="marca_veiculo" required>
 						  	<option value="" selected> Selecionar uma Marca (Moto) </option>
 						  	<option value="SC"> Outros </option>
 						  	<option value="PR"> Honda </option>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="form-group">
 				   	<label for="cod_proprietario"> Cód do Proprietário </label>
-				   	<input id="cod_proprietario" type="text" class="form-control" name="cod_proprietario" placeholder="Informe o Modelo do Veículo" required="">
+				   	<input  type="text" class="form-control" name="cod_proprietario" placeholder="Informe o Modelo do Veículo" required="">
                     </div>
                     
                     
@@ -142,7 +142,7 @@
 	      	<input type="hidden" id="upd_id" name="upd_id">
 		      <div class="modal-footer">
 		      	<button type="button" class="btn btn-secondary" data-dismiss="modal"> Fechar </button>
-		        	<button type="submit" name="alterar_dado" class="btn btn-primary"> Salvar registros </button>
+		        	<button type="submit" name="alterar_dado" class="btn btn-primary"> Alterar Registro </button>
 		      </div>
 		   </form>
    	</div>

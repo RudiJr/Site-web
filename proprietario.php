@@ -22,23 +22,23 @@
                     </div>
                     <div class="form-group">
 				   	<label for="rg"> RG </label>
-				   	<input id="rg" type="text" class="form-control" name="rg" placeholder="Informe o RG do proprietário" required="">
+				   	<input  type="text" class="form-control" name="rg" placeholder="Informe o RG do proprietário" required="">
                     </div>
                     <div class="form-group">
 				   	<label for="cpf"> CPF </label>
-				   	<input id="cpf" type="text" class="form-control" name="cpf" placeholder="Informe o CPF do proprietário" required="">
+				   	<input  type="text" class="form-control" name="cpf" placeholder="Informe o CPF do proprietário" required="">
                     </div>
                      <div class="form-group">
 				   	<label for="telefone"> Telefone </label>
-				   	<input id="telefone" type="text" class="form-control" name="telefone" placeholder="Informe o Telefone do proprietário" required="">
+				   	<input  type="text" class="form-control" name="telefone" placeholder="Informe o Telefone do proprietário" required="">
                     </div>
                     <div class="form-group">
 				   	<label for="cep"> CEP </label>
-				   	<input id="cep" type="text" class="form-control" name="cep" placeholder="Informe o CEP da Cidade" required="">
+				   	<input  type="text" class="form-control" name="cep" placeholder="Informe o CEP da Cidade" required="">
                     </div>
                     <div class="form-group">
 				   	<label for="id_cidade"> ID da Cidade </label>
-				   	<input id="id_cidade" type="text" class="form-control" name="id_cidade" placeholder="Informe o ID da Cidade" required="">
+				   	<input  type="text" class="form-control" name="id_cidade" placeholder="Informe o ID da Cidade" required="">
                     </div>
 				  	
 	      </div>
@@ -98,7 +98,7 @@
 	      	<input type="hidden" id="upd_id" name="upd_id">
 		      <div class="modal-footer">
 		      	<button type="button" class="btn btn-secondary" data-dismiss="modal"> Fechar </button>
-		        	<button type="submit" name="alterar_dado" class="btn btn-primary"> Salvar registros </button>
+		        	<button type="submit" name="alterar_dado" class="btn btn-primary"> Alterar Registro </button>
 		      </div>
 		   </form>
    	</div>

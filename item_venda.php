@@ -19,7 +19,7 @@
 				  
 				  	<div class="form-group">
 				   	<label for="it_venda"> Item da Venda </label>
-				   	<select class="custom-select" name="it_venda" id="uf" required>
+				   	<select class="custom-select" name="it_venda"  required>
 						  	<option value="" selected> Selecionar um dos Itens</option>
 						  	<option value="Carro"> Carro </option>
 						  	<option value="Moto"> Moto </option>
@@ -27,7 +27,7 @@
 				  	</div>
                     	<div class="form-group">
 				   	<label for="cod_venda"> Cód da Venda </label>
-				   	<input type="text" class="form-control" id="cidade" name="cod_venda" placeholder="Informe o código da venda" required="">
+				   	<input type="text" class="form-control"  name="cod_venda" placeholder="Informe o código da venda" required="">
 				  	</div>
 	      	</div>
 		      <div class="modal-footer">
@@ -60,7 +60,7 @@
 				  
 				  	<div class="form-group">
 				   	<label for="it_venda"> Item da Venda </label>
-				   	<select class="custom-select" name="it_venda" id="uf" required>
+				   	<select class="custom-select" id="it_venda" name="it_venda"  required>
 						  	<option value="" selected> Selecionar um dos Itens</option>
 						  	<option value="Carro"> Carro </option>
 						  	<option value="Moto"> Moto </option>
@@ -68,13 +68,13 @@
 				  	</div>
                     	<div class="form-group">
 				   	<label for="cod_venda"> Cód da Venda </label>
-				   	<input type="text" class="form-control" id="cidade" name="cod_venda" placeholder="Informe o código da venda" required="">
+				   	<input type="text" class="form-control" id="cod_venda" name="cod_venda" placeholder="Informe o código da venda" required="">
 				  	</div>
 	      	</div>
 	      	<input type="hidden" id="upd_id" name="upd_id">
 		      <div class="modal-footer">
 		      	<button type="button" class="btn btn-secondary" data-dismiss="modal"> Fechar </button>
-		        	<button type="submit" name="alterar_dado" class="btn btn-primary"> Salvar registros </button>
+		        	<button type="submit" name="alterar_dado" class="btn btn-primary"> Alterar Registro </button>
 		      </div>
 		   </form>
    	</div>

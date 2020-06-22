@@ -68,23 +68,23 @@
 	      	  	<div class="modal-body">
 			<div class="form-group">
 				   	<label for="data_venda"> Data venda </label>
-				   	<input type="text" class="form-control" name="data_venda" placeholder="Informe a Data venda" required="">
+				   	<input type="text" class="form-control" id="data_venda" name="data_venda" placeholder="Informe a Data venda" required="">
 				  	</div>	  	
                             <div class="form-group">
 				   	<label for="valor_venda"> Valor venda </label>
-				   	<input type="text" class="form-control" name="valor_venda" placeholder="Informe o Valor venda" required="">
+				   	<input type="text" class="form-control" id="valor_venda" name="valor_venda" placeholder="Informe o Valor venda" required="">
 				  	</div>
                             <div class="form-group">
 				   	<label for="comissao_vend"> Comissão Vendedor </label>
-				   	<input type="text" class="form-control" name="comissao_vend" placeholder="Informe a Comissão Vendedor" required="">
+				   	<input type="text" class="form-control" id="comissao_vend" name="comissao_vend" placeholder="Informe a Comissão Vendedor" required="">
 				  	</div>
                             <div class="form-group">
 				   	<label for="cod_vendedor"> Cód Vendedor </label>
-				   	<input type="text" class="form-control" name="cod_vendedor" placeholder="Informe o Cód Vendedor" required="">
+				   	<input type="text" class="form-control" id="cod_vendedor" name="cod_vendedor" placeholder="Informe o Cód Vendedor" required="">
 				  	</div>
                             <div class="form-group">
 				   	<label for="cod_cliente"> Cód Cliente </label>
-				   	<input type="text" class="form-control" name="cod_cliente" placeholder="Informe o Cód Cliente" required="">
+				   	<input type="text" class="form-control" id="cod_cliente" name="cod_cliente" placeholder="Informe o Cód Cliente" required="">
 				  	</div>
                     
 				  	
@@ -92,7 +92,7 @@
 	      	<input type="hidden" id="upd_id" name="upd_id">
 		      <div class="modal-footer">
 		      	<button type="button" class="btn btn-secondary" data-dismiss="modal"> Fechar </button>
-		        	<button type="submit" name="alterar_dado" class="btn btn-primary"> Salvar registros </button>
+		        	<button type="submit" name="alterar_dado" class="btn btn-primary"> Alterar Registro </button>
 		      </div>
 		   </form>
    	</div>

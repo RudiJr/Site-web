@@ -55,11 +55,11 @@
 	      	<div class="modal-body">
 				  	<div class="form-group">
 				   	<label for="valor"> Valor da comissão </label>
-				   	<input type="text" class="form-control" name="valor" placeholder="Informe o valor da comissão" required="">
+				   	<input type="text" class="form-control" id="valor" name="valor" placeholder="Informe o valor da comissão" required="">
 				  	</div>
                     <div class="form-group">
 				   	<label for="cod_vendedor"> Código do vendedor </label>
-				   	<input type="text" class="form-control" name="cod_vendedor" placeholder="Informe o Código do vendedor" required="">
+				   	<input type="text" class="form-control" id="cod_vendedor" name="cod_vendedor" placeholder="Informe o Código do vendedor" required="">
 				  	</div>
 				  	
 	      	</div>
