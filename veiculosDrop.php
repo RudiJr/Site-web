@@ -7,11 +7,11 @@
 		$sql = "DELETE FROM veiculos WHERE cod_veiculos = '$id';";
 		
               if ($mysqli->query($sql)) {
-        $_SESSION['msg'] = "Registro Deletado com Sucesso";
+        $_SESSION['msg'] = "Registro excluido com Sucesso";
         header('location: veiculos.php?ret=OK');
     } 
          else {
-            $_SESSION['msg'] = "Erro ao Deletar este registro: <br> ERRO:, $mysqli->error";
+            $_SESSION['msg'] = "Erro ao excluir este registro: <br> ERRO:, $mysqli->error";
         }
         header('location: veiculos.php?ret=erro');
     

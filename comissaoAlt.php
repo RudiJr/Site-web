@@ -6,7 +6,7 @@
 		$id = $_POST['upd_id'];
                 $valor = $_POST['valor'];
                 $cod_vendedor = $_POST['cod_vendedor'];
-		$sql = "UPDATE comissao SET cod_comissao = '$id',valor = '$valor',cod_vendedor =  '$cod_vendedor';";
+		$sql = "UPDATE comissao SET valor = '$valor',cod_vendedor =  '$cod_vendedor' WHERE cod_comissao = '$id' ;";
 		
                 if ($mysqli->query($sql)) {
         $_SESSION['msg'] = "Registro alterado com Sucesso";

@@ -31,7 +31,7 @@
 				  	</div>
                     <div class="form-group">
 				   	<label for="cod_proprietario"> Cód Proprietário </label>
-				   	<input id="cod_proprietario" type="text" class="form-control" name="cod_proprietario" placeholder="Informe o cód do proprietário" required="">
+				   	<input type="text" class="form-control" name="cod_proprietario" placeholder="Informe o cód do proprietário" required="">
 				  	</div>
 	      	</div>
 		      <div class="modal-footer">
@@ -72,7 +72,7 @@
 				  	</div>
                     <div class="form-group">
 				   	<label for="cod_veiculos"> Cód Veículo </label>
-				   	<input type="text" class="form-control" name="cod_veiculos" placeholder="Informe o cód do veiculo" required="">
+				   	<input type="text" class="form-control" id="cod_veiculos" name="cod_veiculos" placeholder="Informe o cód do veiculo" required="">
 				  	</div>
                     <div class="form-group">
 				   	<label for="cod_proprietario"> Cód Proprietário </label>

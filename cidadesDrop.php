@@ -7,7 +7,7 @@ if (isset($_POST['excluir_dado'])) {
     $sql = "DELETE FROM cidade WHERE id_cidade = '$id';";
     
     if ($mysqli->query($sql)) {
-        $_SESSION['msg'] = "Registro Salvo com Sucesso";
+        $_SESSION['msg'] = "Registro excluido com Sucesso";
         header('location: cidades.php?ret=OK');
     } else {
         $_SESSION['msg'] = "Erro ao Salvar este registro: <br> ERRO:, $mysqli->error";

@@ -9,18 +9,18 @@
                 $cep = $_POST['cep'];
                 $telefone = $_POST['telefone'];
                 $id_cidade = $_POST['id_cidade'];
-		$sql = "UPDATE cliente SET cod_cliente = '$id',nome_cliente = '$nome_cliente','cpf = $cpf','cep = $cep',telefone = '$telefone',id_cidade = '$id_cidade';";
+		$sql = "UPDATE cliente SET nome_cliente = '$nome_cliente',cpf = '$cpf', cep = '$cep',telefone = '$telefone',id_cidade = '$id_cidade' WHERE cod_cliente = '$id' ;";
 		
             if ($mysqli->query($sql)) {
         $_SESSION['msg'] = "Registro Alterado com Sucesso";
-        header('location: clientes.php?ret=OK');
+        header('location: cliente.php?ret=OK');
     } else {
         if ($mysqli->errno == 1062) {
             $_SESSION['msg'] = "Registro Duplicado";
         } else {
             $_SESSION['msg'] = "Erro ao Alterar este registro: <br> ERRO:, $mysqli->error";
         }
-        header('location: clientes.php?ret=erro');
+        header('location: cliente.php?ret=erro');
     }
 	}
 ?>

@@ -8,7 +8,7 @@
                 $cep = $_POST['cep'];
 		$telefone = $_POST['telefone'];
                 $id_cidade = $_POST['id_cidade'];
-		$sql = "UPDATE vendedor SET cod_vendedor = '$id',nome = '$nome',cep = '$cep',telefone = '$telefone',id_cidade = '$id_cidade';";
+		$sql = "UPDATE vendedor SET nome = '$nome',cep = '$cep',telefone = '$telefone',id_cidade = '$id_cidade' WHERE cod_vendedor = '$id' ;";
 		
                           if ($mysqli->query($sql)) {
         $_SESSION['msg'] = "Registro Alterado com Sucesso";

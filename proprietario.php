@@ -18,7 +18,7 @@
 	      	<div class="modal-body">
                     <div class="form-group">
 				   	<label for="nome_proprietario"> Nome do Proprietário </label>
-				   	<input id="nome_proprietario" type="text" class="form-control" name="nome_proprietario" placeholder="Informe o nome do proprietário" required="">
+				   	<input  type="text" class="form-control" name="nome_proprietario" placeholder="Informe o nome do proprietário" required="">
                     </div>
                     <div class="form-group">
 				   	<label for="rg"> RG </label>

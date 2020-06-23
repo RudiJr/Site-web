@@ -45,15 +45,15 @@
 				   	<label for="marca_veiculo"> Marcas (Carros e Motos) </label>
 				   	<select  class="custom-select" name="marca_veiculo" required>
 						  	<option value="" selected> Selecionar uma Marca (Moto) </option>
-						  	<option value="SC"> Outros </option>
-						  	<option value="PR"> Honda </option>
-						  	<option value="RS"> Yamaha </option>
+						  	<option value="Outros"> Outros </option>
+						  	<option value="Honda"> Honda </option>
+						  	<option value="Yamaha"> Yamaha </option>
                                                         <option value="" selected> Selecionar uma Marca (Carro) </option>
-						  	<option value="SP"> Outros </option>
-                                                        <option value="SP"> Ford </option>
-						  	<option value="RJ"> Chevrolet </option>
-                                                        <option value="RJ"> Fiat </option>
-                                                        <option value="RJ"> volkswagen </option>
+						  	<option value="Outros"> Outros </option>
+                                                        <option value="Ford"> Ford </option>
+						  	<option value="Chevrolet"> Chevrolet </option>
+                                                        <option value="Fiat"> Fiat </option>
+                                                        <option value="Volkswagen"> volkswagen </option>
 					</select>
                     </div>
                     <div class="form-group">
@@ -118,17 +118,17 @@
                     </div>
                     <div class="form-group">
 				   	<label for="marca_veiculo"> Marcas (Carros e Motos) </label>
-				   	<select id="marca_veiculo" class="custom-select" name="marca_veiculo" required>
+				   	<select  class="custom-select" id="marca_veiculo" name="marca_veiculo" required>
 						  	<option value="" selected> Selecionar uma Marca (Moto) </option>
-						  	<option value="SC"> Outros </option>
-						  	<option value="PR"> Honda </option>
-						  	<option value="RS"> Yamaha </option>
+						  	<option value="Outros"> Outros </option>
+						  	<option value="Honda"> Honda </option>
+						  	<option value="Yamaha"> Yamaha </option>
                                                         <option value="" selected> Selecionar uma Marca (Carro) </option>
-						  	<option value="SP"> Outros </option>
-                                                        <option value="SP"> Ford </option>
-						  	<option value="RJ"> Chevrolet </option>
-                                                        <option value="RJ"> Fiat </option>
-                                                        <option value="RJ"> volkswagen </option>
+						  	<option value="Outros"> Outros </option>
+                                                        <option value="Ford"> Ford </option>
+						  	<option value="Chevrolet"> Chevrolet </option>
+                                                        <option value="Fiat"> Fiat </option>
+                                                        <option value="Volkswagen"> volkswagen </option>
 					</select>
                     </div>
                      <div class="form-group">

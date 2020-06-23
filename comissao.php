@@ -51,7 +51,7 @@
 	        	</button>
 	      </div>
 	      <!-- FORMULÁRIO DOS DADOS -->
-	      <form action="cidadesAlt.php" method="POST" enctype="multipart/form-data">
+	      <form action="comissaoAlt.php" method="POST" enctype="multipart/form-data">
 	      	<div class="modal-body">
 				  	<div class="form-group">
 				   	<label for="valor"> Valor da comissão </label>

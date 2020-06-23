@@ -18,12 +18,8 @@
 	      	<div class="modal-body">
 				  
 				  	<div class="form-group">
-				   	<label for="it_venda"> Item da Venda </label>
-				   	<select class="custom-select" name="it_venda"  required>
-						  	<option value="" selected> Selecionar um dos Itens</option>
-						  	<option value="Carro"> Carro </option>
-						  	<option value="Moto"> Moto </option>
-						</select>
+				   	<label for="it_venda"> Item Da Venda </label>
+				   	<input type="text" class="form-control"  name="it_venda" placeholder="Informe o item da venda" required="">
 				  	</div>
                     	<div class="form-group">
 				   	<label for="cod_venda"> Cód da Venda </label>
@@ -59,12 +55,8 @@
 	      	<div class="modal-body">
 				  
 				  	<div class="form-group">
-				   	<label for="it_venda"> Item da Venda </label>
-				   	<select class="custom-select" id="it_venda" name="it_venda"  required>
-						  	<option value="" selected> Selecionar um dos Itens</option>
-						  	<option value="Carro"> Carro </option>
-						  	<option value="Moto"> Moto </option>
-						</select>
+				   	<label for="it_venda"> Item Da Venda </label>
+				   	<input type="text" class="form-control"  id="it_venda" name="it_venda" placeholder="Informe o item da venda" required="">
 				  	</div>
                     	<div class="form-group">
 				   	<label for="cod_venda"> Cód da Venda </label>

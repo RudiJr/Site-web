@@ -7,10 +7,10 @@
 		$sql = "DELETE FROM compra WHERE cod_compra = '$id';";
 		
                 if ($mysqli->query($sql)) {
-        $_SESSION['msg'] = "Registro Salvo com Sucesso";
+        $_SESSION['msg'] = "Registro excluido com Sucesso";
         header('location: compra.php?ret=OK');
     } else {
-            $_SESSION['msg'] = "Erro ao Salvar este registro: <br> ERRO:, $mysqli->error";
+            $_SESSION['msg'] = "Erro ao excluir este registro: <br> ERRO:, $mysqli->error";
         
         header('location: compra.php?ret=erro');
     }

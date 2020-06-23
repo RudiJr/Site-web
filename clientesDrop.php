@@ -7,13 +7,13 @@
 		$sql = "DELETE FROM cliente WHERE cod_cliente = '$id';";
 		
        if ($mysqli->query($sql)) {
-        $_SESSION['msg'] = "Registro deletado com Sucesso";
-        header('location: clientes.php?ret=OK');
+        $_SESSION['msg'] = "Registro excluido com Sucesso";
+        header('location: cliente.php?ret=OK');
     } 
         else {
-            $_SESSION['msg'] = "Erro ao deletar este registro: <br> ERRO:, $mysqli->error";
+            $_SESSION['msg'] = "Erro ao excluir este registro: <br> ERRO:, $mysqli->error";
         
-        header('location: clientes.php?ret=erro');
+        header('location: cliente.php?ret=erro');
     }
 	}
 ?>

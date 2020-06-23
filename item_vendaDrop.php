@@ -7,10 +7,10 @@
 		$sql = "DELETE FROM item_venda WHERE cod_item = '$id';";
 		
                 if ($mysqli->query($sql)) {
-        $_SESSION['msg'] = "Registro Salvo com Sucesso";
+        $_SESSION['msg'] = "Registro excluido com Sucesso";
         header('location: item_venda.php?ret=OK');
     } else {
-            $_SESSION['msg'] = "Erro ao Salvar este registro: <br> ERRO:, $mysqli->error";
+            $_SESSION['msg'] = "Erro ao excluir este registro: <br> ERRO:, $mysqli->error";
         
         header('location: item_venda.php?ret=erro');
     }

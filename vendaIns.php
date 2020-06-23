@@ -9,7 +9,7 @@
                 $comissao_vend = $_POST['comissao_vend'];
                 $cod_vendedor = $_POST['cod_vendedor'];
                 $cod_cliente = $_POST['cod_cliente'];
-		$sql = "INSERT INTO cidade (cod_venda,data_venda,valor_venda,comissao_vend,cod_vendedor) VALUES ('$cod_venda','$data_venda', '$valor_venda','$comissao_vend','$cod_vendedor','$cod_cliente');";
+		$sql = "insert into venda(cod_venda,data_venda,valor_venda,comissao_vend,cod_vendedor,cod_cliente) values ('$cod_venda','$data_venda', '$valor_venda','$comissao_vend','$cod_vendedor','$cod_cliente');";
 		
                  if ($mysqli->query($sql)) {
         $_SESSION['msg'] = "Registro Salvo com Sucesso";
