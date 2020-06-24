@@ -1,0 +1,15 @@
+#table-veiculos {
+    width: 100%;
+    max-width: 51.5em;
+    margin:auto;
+
+}
+#table-veiculos th, #table-veiculos  td {
+    text-align: center;
+}
+th, td {
+    padding: 5px;
+}
+th {
+    color: #FFC312;
+}

@@ -3,7 +3,7 @@
     if ($_GET['acao'] == 'V') // Verificação do envio do formulário
     {
         $login = $_POST['login'];
-        $senha = $_POST['senha'];
+        $senha = md5($_POST['senha']);
         include_once('conexao.php');
         $sql = "SELECT cod_usuario, nome, nivel FROM usuario WHERE login = '$login' AND senha = '$senha'";
         $result = $mysqli->query($sql);
@@ -96,12 +96,14 @@
                                 } else {
                                     echo "Informe suas credenciais acima para acessar o sistema";                                    
                                 }                                
-                                ?>  
+                                ?> 
                             </div>
                         </div>
                     </div>
                 </div>
+                  <a href="index.php" class="back" >Voltar a página principal sem fazer login</a>
             </div>
+            <br>
         </form>
     </body>
 </html>

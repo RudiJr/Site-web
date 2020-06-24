@@ -12,19 +12,30 @@ body {
 	height: 305px;
 	width: 100%;
         overflow: hidden;
+        background-image: url(../img/07.jpg);
+        background-color: black;
+        background-size: contain;
+        background-position: center center;
 }
 
 .menu {
 	height: 60px;
 	width: 100%;
 	background-color: black;
-	margin-top: -30px;
+	
+       
 }
-
+.menu ul {
+    width: 100%;
+     display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+}
 .menu li {
 	list-style: none;
 	display: inline;
-	margin-left: 197px;
+	flex: 1;
+        text-align: center;
 }
 
 * a {

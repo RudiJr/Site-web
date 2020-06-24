@@ -11,15 +11,15 @@
     <body>
     <div class="container">   
         <div class="cabecalho">
-        <a href="index.php"><img src="img/07.jpg" alt="" title="Thiago Motos e Automóveis Home" height="305px" width="100%"/></a>
+        
     </div>
     <div class="menu">
         <ul>
             <li><a href="index.php"> HOME </a></li>
             <li><a href="catalogo.php"> CATÁLOGO </a></li>
-            
             <li><a href="financiamento.php"> FINANCIAMENTO </a></li>
             <li><a href="contatos.php"> CONTATO </a></li>
+            
 	</ul>
     </div>
         <div class="conteudo">

@@ -11,7 +11,7 @@
     <body>
         <div class="container">
             <div class="cabecalho">
-                <a href="index.php"><img src="img/07.jpg" alt="" title="Thiago Motos e Automóveis Home" height="305px" width="100%" /></a>
+               
             </div>
             <div class="menu">
                 <ul>
@@ -19,10 +19,12 @@
                     <li><a href="catalogo.php" title="Catálogo"> CATÁLOGO </a></li>
                     <li><a href="financiamento.php" title="FInanciamento"> FINANCIAMENTO </a></li>
                     <li><a href="contatos.php" title="Contato"> CONTATO </a></li>
+                    <li><a href="?url=crud" title="administração"> ADMINISTRAÇÃO </a></li>
+                         
                 </ul>
             </div>
  
-</div>
+
             <!-- Os pontos são clicáveis, é oq faz mudar o slide! -->
             <div class="conteudo">
                 <ul class="slider">

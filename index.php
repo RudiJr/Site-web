@@ -1,6 +1,9 @@
 <?php
-include_once('sessao.php');
-include_once('header_crud.php');
+
+if($_GET['url']!= ''){
+    include_once('sessao.php');
+    include_once('header_crud.php');
+}
 switch ($_GET['url']) {
     case 'cidades':
         include_once('cidades.php');
@@ -35,9 +38,12 @@ switch ($_GET['url']) {
     case 'usuarios':
         include_once('usuarios.php');
         break;
-    default:
+    case 'crud':
         include_once('inicial_Crud.php');
         break;
+    default:
+        include_once('inicial.php');
+        break;
 }
-include_once('footer_crud.php');
+if($_GET['url'])  include_once('footer_crud.php');
 ?>
