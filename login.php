@@ -5,7 +5,7 @@
         $login = $_POST['login'];
         $senha = $_POST['senha'];
         include_once('conexao.php');
-        $sql = "SELECT cod_usuario, nome FROM usuario WHERE login = '$login' AND senha = '$senha'";
+        $sql = "SELECT cod_usuario, nome, nivel FROM usuario WHERE login = '$login' AND senha = '$senha'";
         $result = $mysqli->query($sql);
         $register = $mysqli->affected_rows;
         if ($register == 1)
@@ -13,9 +13,12 @@
             $dados = $result->fetch_array();
             $id_usuario = $dados['cod_usuario'];
             $us_name = $dados['nome'];
+            $us_nivel = $dados['nivel'];
+            
             $_SESSION['us_sessao'] = session_id();
             $_SESSION['us_id'] = $id_usuario;
             $_SESSION['us_name'] = $us_name;
+            $_SESSION['us_nivel'] = $us_nivel;
             header('location: index.php');
         }
         else
@@ -23,10 +26,12 @@
             unset($_SESSION['us_sessao']);
             unset($_SESSION['us_id']);
             unset($_SESSION['us_name']);
+            unset($_SESSION['us_nivel']);
             $msg = 'erro_login';
         }
     }
 ?>
+
 
 <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>

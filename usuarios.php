@@ -67,7 +67,7 @@
                 <div class="modal-body">               
                     <div class="form-group">
                         <label for="nome">Nome do Usuário</label>
-                        <input type="text" class="form-control" name="nome_alt" id="nome_alt" placeholder="Nome completo do Usúario" required>       
+                        <input type="text" class="form-control"  name="nome_alt" id="nome_alt" placeholder="Nome completo do Usúario" required>       
                     </div>
                     <div class="form-group">
                         <label for="login">Login</label>
@@ -113,7 +113,7 @@
                 </button>
             </div>
             <!-- FORMULÁRIO DOS DADOS -->
-            <form action="usuarioDel.php" method="POST" enctype="multipart/form-data">
+            <form action="usuarioDrop.php" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">               
                     <input type="hidden" id="del_id" name="del_id">       
                     <h6>Tem certeza que deseja excluir esse registro?</h6>
@@ -129,8 +129,8 @@
 <!--======================================================================================================================-->
 <!--BLOCO DE BOTÕES-->
     <div class="jumbotron">
-        <div class="card" id="titulo">
-            <h2> USUÁRIOS ADMINISTRATIVOS </h2>
+        <div  style='text-align:center' class="card" id="titulo">
+            <h2> Usuários </h2>
         </div>
 
         <div class="card">
@@ -205,7 +205,7 @@
 
 </div> <!-- jumbotrom -->
 
-<?php include_once 'footer.php'; ?>
+<?php include_once 'footer_crud.php'; ?>
 
 <!--Fecha a tela de mensagem após determinado período-->
 <script type="text/javascript">

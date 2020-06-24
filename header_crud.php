@@ -43,7 +43,15 @@
           <a class="dropdown-item" href="venda.php">Venda</a>
           <a class="dropdown-item" href="item_venda.php">Item da venda</a>
           <div class="dropdown-divider"></div>
+          <?php
+                            //CASO SEJA USUÁRIO MASTER, MOSTRA CADASTRO DE USUÁRIOS
+                            include_once 'sessao.php';
+                            if($_SESSION['us_nivel'] == 1){
+                            ?> 
           <a class="dropdown-item" href="usuarios.php">Usuários</a>
+          <?php
+                            }
+                            ?>
           <a class="dropdown-item" href="logout.php">Sair</a>
         </div>
       </li>

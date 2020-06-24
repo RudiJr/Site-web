@@ -30,6 +30,7 @@
                 <br>
                 <h2>Thiago Motos e Automóveis</h2>
                 <p>Nas proximas versões será adicionado um catálogo com os carros presentes na loja.</p>
+             
                         
             </div>
             <div class="rodape">
