@@ -42,6 +42,8 @@
           <a class="dropdown-item" href="comissao.php">Comissão</a>
           <a class="dropdown-item" href="venda.php">Venda</a>
           <a class="dropdown-item" href="item_venda.php">Item da venda</a>
+          <a class="dropdown-item" href="contato.php">Contatos</a>
+          <a class="dropdown-item" href="mensagens.php">Mensagens</a>
           <div class="dropdown-divider"></div>
           <?php
                             //CASO SEJA USUÁRIO MASTER, MOSTRA CADASTRO DE USUÁRIOS

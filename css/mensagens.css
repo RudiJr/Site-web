@@ -1,0 +1,20 @@
+.formulario {
+      color: #FFC312;
+     
+}
+.form-group {
+  
+}
+.msg {
+    color: white;
+}
+.form-control {
+    color: white;
+}
+label, input {
+	width:70px;
+	margin: 6px 0;
+}
+input {
+	width:600px;
+}

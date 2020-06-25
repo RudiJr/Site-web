@@ -7,7 +7,7 @@ create table cidade (
 	uf varchar(2) not null
 );
 INSERT INTO cidade(id_cidade,cidade,uf) VALUES ('1','Três Passos','RS');
-
+select * from cidade;
 create table modelo (
 	cod_modelo INT AUTO_INCREMENT PRIMARY KEY
 );
@@ -24,7 +24,7 @@ create table proprietario (
 );
 INSERT INTO proprietario(cod_proprietario,nome_proprietario,rg,cpf,telefone,cep,id_cidade) VALUES ('1','Thiago motos e Automóveis','24.704.082-4','251.307.760-11','553522-2371','98600-000','1');
 INSERT INTO proprietario(cod_proprietario,nome_proprietario,rg,cpf,telefone,cep,id_cidade) VALUES ('2','Gera sul Veiculos','21.216.824-1','917.445.600-80',' 553522-1125','98600-000','1');
-
+select * from proprietario;
 create table veiculos(
 	cod_veiculos INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     cod_modelo integer,
@@ -135,6 +135,7 @@ INSERT INTO veiculos(cod_veiculos,cor,valor,modelo_veiculo,ano,marca_veiculo,cod
 INSERT INTO veiculos(cod_veiculos,cor,valor,modelo_veiculo,ano,marca_veiculo,cod_marca,tipo_veiculo,cod_proprietario) VALUES ('89','Vermelho','35.900','GOL RALLYE 1.6 COMP','2014','Volkswagen','7','Carro','2');
 INSERT INTO veiculos(cod_veiculos,cor,valor,modelo_veiculo,ano,marca_veiculo,cod_marca,tipo_veiculo,cod_proprietario) VALUES ('90','Prata','38.900','VOYAGE TRENDLINE 1.6 COMP','2017','Volkswagen','7','Carro','2');
 
+
 create table revisao (
 	cod_revisao INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     data_revisao varchar(15),
@@ -143,6 +144,7 @@ create table revisao (
     cod_veiculos int not null,
     constraint fk_veiculos foreign key (cod_veiculos) references veiculos(cod_veiculos)
 );
+
 
 
 create table compra (
@@ -218,8 +220,9 @@ constraint fk_vend foreign key (cod_vendedor) references vendedor(cod_vendedor);
 alter table venda add
 constraint fk_cliente foreign key (cod_cliente) references cliente(cod_cliente);
 
-insert into venda(cod_venda,valor_venda,cod_vendedor,cod_cliente) values ('1','36.900','2','3');
-insert into venda(cod_venda,valor_venda,cod_vendedor,cod_cliente) values ('2','8.500','2','7');
+insert into venda(cod_venda,data_venda,valor_venda,comissao_vend,cod_vendedor,cod_cliente) values ('4','22/02/2020','16.900','90','2','5');
+
+
 
 
 create table item_venda (
@@ -234,7 +237,10 @@ insert into item_venda (cod_item,it_venda,cod_venda) values ('2','CG FAN ESDI', 
 
 create table usuario ( 
 	cod_usuario int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Nome Varchar(100) not null,
-    Login Varchar(20) not null,
-    Senha Varchar(20) not null
+    nome Varchar(100) not null,
+    login Varchar(80) not null,
+    senha Varchar(100) not null,
+    nivel int
 );
+
+

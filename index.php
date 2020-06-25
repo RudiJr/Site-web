@@ -35,6 +35,12 @@ switch ($_GET['url']) {
     case 'item_venda':
         include_once('item_venda.php');
         break;
+    case 'contato':
+        include_once('contato.php');
+        break;
+    case 'mensagens':
+        include_once('mensagens.php');
+        break;
     case 'usuarios':
         include_once('usuarios.php');
         break;
