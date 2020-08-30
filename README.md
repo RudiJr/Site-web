@@ -6,4 +6,4 @@
 
 ### Como está o Projeto?
 > Status do Projeto: Concluído :heavy_check_mark:
-Trabalho entregue? :heavy_check_mark:
+<p>Trabalho entregue? :heavy_check_mark: </p>
